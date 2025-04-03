@@ -1,4 +1,4 @@
-# Curso de Java - de principiante a avazado
+# Curso de Java - de principiante a avanzado
 
 Bienvenido al curso de Java de principiante a avanzado. Este repositorio está organizado en ramas para facilitar el acceso a cada sección del curso. <br> <br>
 ![Java](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=openjdk&logoColor=white&color=6aa6f8)  ![GitHub juansuarezb](https://img.shields.io/github/followers/juansuarezb?label=Follow&style=social) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=juansuarezb.CursoJava)
