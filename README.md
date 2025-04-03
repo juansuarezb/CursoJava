@@ -23,12 +23,11 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
   <ul>
     <li><strong>Introducción</strong></li>
   </ul>
-  <blockquote>
-  <strong>VIEW PDF:</strong><br>
-  <a href="https://github.com/juansuarezb/CursoJava/blob/Seccion1/Clases/PresentacionModulo1.pdf" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Ver_Presentación-FF5733?style=flat&logo=adobeacrobatreader&logoColor=white" alt="PDF">
-  </a>
-  </blockquote>
+   <div align="center">
+    <a href="https://github.com/juansuarezb/CursoJava/blob/Seccion1/Clases/PresentacionModulo1.pdf" target="_blank">
+      <img src="https://img.shields.io/badge/VER_PRESENTACIÓN-FF5733?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF">
+    </a>
+  </div>
 </details>
 
 <details>
