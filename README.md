@@ -19,11 +19,16 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 1 - Introducción al curso</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">primera sección</a> se hará una introducción al curso además de los siguientes temas: </p>
- <ul>
-  <li><strong>¿Qué es Java?</strong></li>
-  <li><strong>IDEs a utilizar en el curso:</strong> NetBeans e IntelliJ</li>
-</ul>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">primera sección</a> se hará una introducción al curso</p>
+  <ul>
+    <li><strong>Introducción</strong></li>
+  </ul>
+  <blockquote>
+  <strong>VIEW PDF:</strong><br>
+  <a href="https://github.com/juansuarezb/CursoJava/blob/Seccion1/Clases/PresentacionModulo1.pdf" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Ver_Presentación-FF5733?style=flat&logo=adobeacrobatreader&logoColor=white" alt="PDF">
+  </a>
+  </blockquote>
 </details>
 
 <details>
@@ -61,6 +66,12 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
   <li><strong>Cuestionario 1: Manejo de variables y operadores </strong></li>
   <li><strong>RESUMEN</strong></li>       
 </ul>
+  <blockquote>
+  <strong>VIEW PDF:</strong><br>
+  <a href="https://github.com/juansuarezb/CursoJava/blob/Seccion3/Clases/PresentacionModulo2.pdf" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Ver_Presentación-FF5733?style=flat&logo=adobeacrobatreader&logoColor=white" alt="PDF">
+  </a>
+  </blockquote>
 </details>
 
 <details>
@@ -93,7 +104,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 5 - Funciones en Java</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion5">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion5">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Presentación de módulo</strong></li>
     <li><strong>Definir una función</strong></li>
@@ -111,7 +122,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 6 - Aplicaciones</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion6">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion6">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Presentación de módulo</strong></li>
     <li><strong>Primalidad</strong></li>
@@ -128,7 +139,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 7 - Programación Orientada a Objetos</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Presentación de curso - POO</strong></li>
     <li><strong>Programación Orientada a Objetos</strong></li>
@@ -140,7 +151,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 8 - POO: Clases y Objetos</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion8">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion8">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Clases y Objetos</strong></li>
     <li><strong>Paquetes</strong></li>
@@ -156,7 +167,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 9 - POO: Encapsulamiento </summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>¿Qué es encapsulamiento?</strong></li>
     <li><strong>Getters y Setters</strong></li>
@@ -166,7 +177,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 10 - Herencia</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion10">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion10">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>¿Qué es la herencia?</strong></li>
     <li><strong>Superclase y protected/strong></li>
@@ -182,7 +193,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 11 - POO: Enumeraciones, clases abstractas e interfaces</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion11">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion11">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Clases y Objetos</strong></li>
     <li><strong>Paquetes</strong></li>
@@ -198,7 +209,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 12 - POO: Manejo de excepciones</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion12">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion12">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Errores</strong></li>
     <li><strong>Generar Excepciones</strong></li>
@@ -211,7 +222,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 13 - POO: Proyecto Catalogo de Películas</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion13">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion13">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Presentación del proyecto</strong></li>
     <li><strong>JavaBeans</strong></li>
@@ -226,7 +237,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 14 - PD: Persistencia de Datos</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Presentación de la sección </strong></li>
     <li><strong>Persistencia de datos</strong></li>
@@ -241,7 +252,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 15 - PD: Introducción a MYSQL </summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Instalar MySQL </strong></li>
     <li><strong>Crear Base de datos </strong></li>
@@ -253,7 +264,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 16 - PD: Conexión a MySQL</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Descargar dependencias de MySQL </strong></li>
     <li><strong>De Java a MySQL </strong></li>
@@ -267,7 +278,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 17 - Introducción a JAVA web</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">En esta sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Instalar Apache Tomcat 9 </strong></li>
     <li><strong>Hola Mundo Web </strong></li>
