@@ -17,7 +17,8 @@
 > - Proyecto Maven (en lugar de Ant) <br>
 > ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen1.avif) <br>
 > **Utilizamos el package "com.oregoom.mensajes" porque es la base de datos que vamos a utilizar** 
-> - Objetivo: Conexión segura Java-MySQL   
+> - Objetivo: Conexión segura Java-MySQL
+> -    
 > **Estructura Maven para Java + MySQL**  
 >   
 > 📂 **Raíz del proyecto**  
