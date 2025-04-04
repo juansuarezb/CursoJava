@@ -263,7 +263,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 <details>
   <summary>Sección 16 - PD: Conexión a MySQL</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se abordarán los siguientes temas: </p>
+  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion16">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>Descargar dependencias de MySQL </strong></li>
     <li><strong>De Java a MySQL </strong></li>
