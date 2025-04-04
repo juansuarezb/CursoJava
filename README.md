@@ -18,7 +18,7 @@
 > ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen1.avif) <br>
 > **Utilizamos el package "com.oregoom.mensajes" porque es la base de datos que vamos a utilizar** 
 > - Objetivo: Conexión segura Java-MySQL
-> -    
+   
 > **Estructura Maven para Java + MySQL**  
 >   
 > 📂 **Raíz del proyecto**  
@@ -92,71 +92,206 @@
 > ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen4.avif) <br>
 
 
-## 3. SELECT - desde Java
+## 3. SELECT desde Java 
+
 > [!NOTE]
-> Una tabla es el lugar dónde vamos a almacenar los datos/registros.
+> **Objetivo**:  
+> Consultar y mostrar registros de una tabla MySQL directamente desde Java usando JDBC.
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen16.avif) <br>
-> [!NOTE] 
-> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB, luego ingresamos los datos que va a tener la tabla. <br>
+### 🔍 Método `listarRegistros()`
+```java
+package com.oregoom.mensajes;
+import java.sql.*;
 
-> Un consejo útil o una sugerencia.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen17.avif) <br>
-
-```sql
-CREATE TABLE mensajes_db.mensajes(
-	id_mensaje INT NOT NULL AUTO_INCREMENT,
-    /*
-  seleccionamos la db (mensajes_db) y ponemos el nombre de la taba (mensajes)*/
-    mensaje VARCHAR(280) NOT NULL,
-	autor_mensaje VARCHAR(45) NOT NULL,
-    fecha_creacion datetime NOT NULL,
-    PRIMARY KEY (id_mensaje)
-);;
-
+public class Main {
+    public static void main(String[] args) throws SQLException {
+        listarRegistros(); // Ejecutar consulta
+    }
+    
+    static void listarRegistros() throws SQLException {
+        // 1. Establecer conexión
+        Connection conexion = DriverManager.getConnection(
+            "jdbc:mysql://localhost/mensajes_db?serverTimezone=UTC", 
+            "root", 
+            "root"
+        );
+        
+        // 2. Preparar consulta SQL
+        String sql = "SELECT * FROM mensajes";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        
+        // 3. Ejecutar y procesar resultados
+        ResultSet resultados = ps.executeQuery();
+        System.out.println("📊 Registros encontrados:");
+        
+        while(resultados.next()) {
+            System.out.printf(
+                "| ID: %d | Mensaje: %-20s | Autor: %-10s | Fecha: %s |\n",
+                resultados.getInt("id_mensaje"),
+                resultados.getString("mensaje"),
+                resultados.getString("autor_mensaje"),
+                resultados.getString("fecha_creacion")
+            );
+        }
+        
+        // 4. Cerrar recursos
+        resultados.close();
+        ps.close();
+        conexion.close();
+    }
+}
 ```
-## 4. INSERT INTO - desde Java
+
+> [!NOTE]  
+> <div align="center">
+> 
+> ```mermaid
+> flowchart LR
+>     A[DriverManager] -->|Conexión| B[PreparedStatement]
+>     B -->|Ejecuta| C[ResultSet]
+>     C -->|Muestra| D[printf]
+> ```
+> 
+> | Componente | Propósito |
+> |------------|-----------|
+> | **DriverManager** | Inicia la conexión JDBC |
+> | **PreparedStatement** | Ejecuta queries SQL de forma segura |
+> | **ResultSet** | Iteración sobre resultados |
+> | **printf** | Formateo profesional de salida |
+> 
+> </div>
+> ![Diagrama de flujo UPDATE JDBC](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen5.avif)  
+
+
+## 4. INSERT desde Java 
 > [!NOTE]
-> Una vez creada la tabla podemos seleccionar los registros que tenga esta.
-> Seleccionamos todos los registros de la tabla mensajes, actualmente está vacío. <br>
->![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen18.avif) <br>
+> **Objetivo**:  
+> Insertar registros a una tabla MySQL directamente desde Java usando JDBC.
+> ```mermaid
+> flowchart TB
+>     A[DriverManager] -->|Establece conexión| B[PreparedStatement]
+>     B -->|Parametriza| C[Valores SQL]
+>     C -->|Ejecuta| D[executeUpdate]
+>     D -->|Confirma| E[Registro insertado]
+> ```
 
-**Insertamos a la tabla mensajes con este comando:** <br>
+<div align="center">
 
-```sql
-INSERT INTO mensajes_db.mensajes (mensaje, autor_mensaje,fecha_creacion)
-VALUES ("Hola Mundo", "Juan Suárez",current_time());
+| Componente | Función |
+|------------|---------|
+| **DriverManager** | Crea la conexión a la BD (`jdbc:mysql://...`) |
+| **PreparedStatement** | Prepara el INSERT con parámetros seguros (`?`) |
+| **setString()** | Asigna valores a los parámetros (1=mensaje, 2=autor) |
+| **executeUpdate()** | Ejecuta la inserción (retorna filas afectadas) |
+| **CURRENT_TIME()** | Función MySQL para timestamp automático |
+
+</div>
+
+```java
+static void insertarRegistros(String mensaje, String autor) throws SQLException {
+    Connection conexion = DriverManager.getConnection(
+        "jdbc:mysql://localhost/mensajes_db?serverTimezone=UTC", 
+        "root", 
+        "root"
+    );
+    
+    String sql = "INSERT INTO mensajes (mensaje, autor_mensaje, fecha_creacion) " +
+                 "VALUES (?, ?, CURRENT_TIME())";
+    
+    PreparedStatement ps = conexion.prepareStatement(sql);
+    ps.setString(1, mensaje);  // Primer parámetro (mensaje)
+    ps.setString(2, autor);    // Segundo parámetro (autor)
+    ps.executeUpdate();
+    
+    ps.close();
+    conexion.close();
+}
 ```
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen19.avif) <br>
-> [!NOTE] 
-> Volvemos a listar los registros de la tabla para verificar la inserción. <br>
+</div>
 
 ## 5. UPDATE - desde Java
 > [!NOTE]
-> Vamos a editar o actualizar y también eliminar un registro.
-> Para editar un registro necesitamos el id y los campos a ser editados<br>
+> **Objetivo**:  
+> Modificar registros existentes en MySQL mediante JDBC usando parámetros seguros.
+> 
+> ```java
+> static void actualizarRegistros(String mensaje, String autor, int id) throws SQLException{
+>     // 1. Establecer conexión
+>     Connection conexion = DriverManager.getConnection(
+>             "jdbc:mysql://localhost/mensajes_db?serverTimezone=UTC", 
+>             "root", 
+>             "root");
+>     
+>     // 2. Preparar consulta parametrizada
+>     String sql = "UPDATE mensajes SET mensaje = ?, autor_mensaje = ? WHERE id_mensaje = ?";
+>     PreparedStatement ps = conexion.prepareStatement(sql);
+>     
+>     // 3. Asignar valores
+>     ps.setString(1, mensaje);
+>     ps.setString(2, autor);
+>     ps.setInt(3, id);
+>     
+>     // 4. Ejecutar
+>     int filasAfectadas = ps.executeUpdate();
+>     System.out.println(filasAfectadas + " registro(s) actualizado(s)");
+>     
+>     // 5. Liberar recursos
+>     ps.close();
+>     conexion.close();
+> }
+> ```
+>   
+> ![Diagrama de flujo UPDATE JDBC](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen6.avif)   
 
-```sql
-UPDATE mensajes_db.mensajes 
-SET mensaje= "Mensaje cambiado", 
-autor_mensaje="Rolando Soto"
-WHERE id_mensaje = 2;
-```
-> [!NOTE] 
-> Volvemos a listar los registros de la tabla para verificar el cambio. <br>
-> ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen20.avif) <br>
 
+<div align="center">
+
+| Elemento | Rol en la Actualización |
+|----------|-------------------------|
+| `UPDATE mensajes` | Especifica la tabla a modificar |
+| `SET campo=?` | Indica qué columnas actualizar |
+| `WHERE id_mensaje=?` | Condición para actualizar solo el registro con ese ID |
+| `ps.setInt(3, id)` | Vincula el valor del ID al tercer parámetro (?) |
+| `executeUpdate()` | Retorna 1 si se actualizó, 0 si no encontró el ID |
+
+</div>
+ 
 ## 6. DELETE - desde Java
 > [!NOTE]
-> Vamos a editar o actualizar y también eliminar un registro.
-> Para editar un registro necesitamos el id y los campos a ser editados<br>
+> **Objetivo**:  
+> Eliminar registros específicos de MySQL usando JDBC con parámetros seguros.
+> 
+> ```java
+> static void eliminarRegistros(int id) throws SQLException{
+>         // 1. Establecer conexión
+>         Connection conectar = DriverManager.getConnection(
+>                 "jdbc:mysql://localhost/mensajes_db?serverTimezone=UTC", 
+>                 "root", 
+>                 "root");
+>         
+>         // 2. Preparar consulta DELETE
+>         String sql = "DELETE FROM mensajes WHERE id_mensaje = ?";
+>         PreparedStatement ps = conectar.prepareStatement(sql);
+>         
+>         // 3. Asignar valor al parámetro
+>         ps.setInt(1, id);
+>         
+>         // 4. Ejecutar eliminación
+>         int filasEliminadas = ps.executeUpdate();
+>         System.out.println(filasEliminadas + " registro(s) eliminado(s)");
+>         
+>         // 5. Liberar recursos
+>         ps.close();
+>         conectar.close();
+>     }
+> ```
 
+<div align="center">
 
-> [!NOTE] 
-> Finalmente, vamos a eliminar un registro mediante el comando: <br>
+| Componente | Función Específica en DELETE |
+|------------|------------------------------|
+| **DELETE FROM** | Sintaxis SQL para eliminar registros |
+| **WHERE** | Cláusula que identifica el registro a eliminar por ID |
+| **executeUpdate()** | Retorna el número de filas eliminadas (1=éxito, 0=ID no encontrado) |
 
-```sql
-DELETE  FROM mensajes_db.mensajes 
-WHERE id_mensaje = 2;
-```
+</div>
