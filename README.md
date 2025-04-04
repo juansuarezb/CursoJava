@@ -21,7 +21,7 @@
   </div>
 
   <div align="center">
-    <a href="https://github.com/juansuarezb/CursoJava/blob/Seccion1/Clases/PresentacionModulo1.pdf" target="_blank">
+    <a href="https://github.com/juansuarezb/CursoJava/blob/Seccion1/PresentacionModulo1.pdf" target="_blank">
       <img src="https://img.shields.io/badge/VER_PRESENTACIÓN-FF5733?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF">
     </a>
   </div>
