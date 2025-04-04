@@ -16,15 +16,7 @@
 > **Vamos a trabajar con un nuevo stack:** Maven + JDBC  
 > - Proyecto Maven (en lugar de Ant) <br>
 > ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen1.avif) <br>
-> **Utilizamos el package "com.oregoom.mensajes" porque es la base de datos que vamos a utilizar**
-> - Dependencia esencial:  
->   ```xml  
->   <dependency>  
->       <groupId>mysql</groupId>  
->       <artifactId>mysql-connector-java</artifactId>  
->       <version>8.0.33</version>  
->   </dependency>  
->   ```  
+> **Utilizamos el package "com.oregoom.mensajes" porque es la base de datos que vamos a utilizar** 
 > - Objetivo: Conexión segura Java-MySQL  
 
 > [!NOTE]  
