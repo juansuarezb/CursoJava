@@ -1,3 +1,5 @@
+# Sección 15: Introducción a MySQL
+
 > [!NOTE]
 > La instalación y configuración completa del entorno MySQL incluye:
 > 
@@ -88,10 +90,6 @@
 > [!NOTE]
 > Podemos eliminar la DB recien creada mediante la opción "DROP SCHEMA". <br> 
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen13.avif) <br>
-> [!NOTE]
-> Podemos eliminar la DB recien creada mediante la opción "DROP SCHEMA". <br>
-
 ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen14.avif) <br>
 > [!NOTE]
 > Podemos crear una DB directamente con el Query. <br>
@@ -117,13 +115,11 @@ SHOW DATABASES;
 
 ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen16.avif) <br>
 > [!NOTE] 
-> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB. <br>
+> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB, luego ingresamos los datos que va a tener la tabla. <br>
 
 > Un consejo útil o una sugerencia.
 
 ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen17.avif) <br>
-> [!NOTE] 
-> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB. <br>
 
 ```sql
 CREATE TABLE mensajes_db.mensajes(
@@ -137,8 +133,36 @@ CREATE TABLE mensajes_db.mensajes(
 );;
 
 ```
+## 4. Insertar registro
+> [!NOTE]
+> Una vez creada la tabla podemos seleccionar los registros que tenga esta.
+> Seleccionamos todos los registros de la tabla mensajes, actualmente está vacío. <br>
+>![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen18.avif) <br>
 
+**Insertamos a la tabla mensajes con este comando:** <br>
 
+```sql
+INSERT INTO mensajes_db.mensajes (mensaje, autor_mensaje,fecha_creacion)
+VALUES ("Hola Mundo", "Juan Suárez",current_time());
+```
+![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen19.avif) <br>
+> [!NOTE] 
+> Volvemos a listar los registros de la tabla para verificar la inserción. <br>
+
+## 5. Editar y Eliminar Registro
+> [!NOTE]
+> Vamos a editar o actualizar y también eliminar un registro.
+> Para editar un registro necesitamos el id y los campos a ser editados<br>
+
+```sql
+UPDATE mensajes_db.mensajes 
+SET mensaje= "Mensaje cambiado", 
+autor_mensaje="Rolando Soto"
+WHERE id_mensaje = 2;
+```
+> [!NOTE] 
+> Volvemos a listar los registros de la tabla para verificar el cambio. <br>
+> ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen20.avif) <br>
 
 
 > [!CAUTION]
