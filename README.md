@@ -160,7 +160,8 @@ public class Main {
 > | **printf** | Formateo profesional de salida |
 > 
 > </div>
-> ![Diagrama de flujo UPDATE JDBC](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen5.avif)  
+> 
+![Diagrama de flujo UPDATE JDBC](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen5.avif)    
 
 
 ## 4. INSERT desde Java 
