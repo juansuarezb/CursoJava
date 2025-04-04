@@ -1,115 +1,107 @@
-# Sección 15: Introducción a MySQL
+# Sección 16: PD - Conexión a MySQL
 
 > [!NOTE]
-> La instalación y configuración completa del entorno MySQL incluye:
-> 
-> **🗄️ Servidor MySQL**  
-> - Instalación del motor de base de datos.  
-> - Configuración de usuarios/contraseñas  
->  
-> **🖥️ MySQL Workbench**  
-> - Herramienta gráfica para administración  
->  
-> **⌨️ Integración CLI**  
-> - Acceso a comandos MySQL desde terminal nativo  
-> - Variables de entorno configuradas globalmente  
+> **Temas cubiertos:**
+> - Descargar dependencias de MySQL  
+> - De Java a MySQL  
+> - SELECT - desde Java
+> - INSERT INTO - desde Java
+> - UPDATE - desde Java
+> - DELETE - desde Java
+ 
 
-## 1. Instalación de MySQL
+## 1. Descargar dependencias de MySQL  
 
-> [!IMPORTANT]
-> <p>Acceda al <a href="https://dev.mysql.com/downloads/installer/" target="_blank" rel="noopener noreferrer">sitio oficial</a> para descargar el instalador de MySQL.</p>
+> [!NOTE]  
+> **Vamos a trabajar con un nuevo stack:** Maven + JDBC  
+> - Proyecto Maven (en lugar de Ant) <br>
+> ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen1.avif) <br>
+> **Utilizamos el package "com.oregoom.mensajes" porque es la base de datos que vamos a utilizar**
+> - Dependencia esencial:  
+>   ```xml  
+>   <dependency>  
+>       <groupId>mysql</groupId>  
+>       <artifactId>mysql-connector-java</artifactId>  
+>       <version>8.0.33</version>  
+>   </dependency>  
+>   ```  
+> - Objetivo: Conexión segura Java-MySQL  
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen1.avif)
+> [!NOTE]  
+> **Estructura Maven para Java + MySQL**  
+>   
+> 📂 **Raíz del proyecto**  
+> - `pom.xml` (Configuración y dependencias)  
+>   
+> 📁 **src/main/java**  
+> - Paquete: `com.oregoom.mensajes`  
+> - Clase principal: `JavaMySQL.java` (Conexión a BD)  
+>   
+> 🔗 **Dependencias clave**  
+> - JDK 18  (Instalado en la máquina por nosotros)
+> - `mysql-connector-java` (en `pom.xml`)  
+>   
+> ![Estructura del proyecto](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen2.avif)  
+
+## Configuración del proyecto Maven
+
+### Archivo `pom.xml` esencial
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <!-- Configuración básica -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.oregoom</groupId>
+    <artifactId>Java_Mysql</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    <!-- Dependencias clave -->
+    <dependencies>
+        <!-- Conector MySQL para JDBC -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+    </dependencies>
+</project>
+```
 > [!NOTE]
-> *Paso 1: Selección de versión*  
-> En el instalador, elegir la versión completa con todos los componentes (opción más pesada pero completa).
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen2.avif)
-> [!NOTE]
-> *Paso 2: Descarga*  
-> Seleccionar "No thanks, just start my download" para iniciar la descarga sin crear cuenta.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen3.avif)
-> [!NOTE]
-> *Paso 3: Ejecución*  
-> Ejecutar el instalador descargado para comenzar el proceso.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen4.avif)
-> [!NOTE]
-> *Paso 4: Tipo de instalación*  
-> Seleccionar "Custom Type" para controlar qué componentes instalar (solo servidor y Workbench).
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen5.avif)
-> [!NOTE]
-> *Paso 5: Selección de componentes*  
-> Usar las flechas para agregar:  
-> - MySQL Server (motor principal)  
-> - MySQL Workbench (interfaz gráfica)
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen6.avif)
-> [!NOTE]
-> *Paso 6: Confirmación*  
-> Seleccionar "Execute" para iniciar la descarga e instalación de los paquetes seleccionados.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen7.avif)
-> [!WARNING]
-> *Paso 7: Configuración clave*  
-> **¡Atención!** Guardar esta contraseña generada para el usuario root, es fundamental para acceder al sistema.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen8.avif)
-> [!NOTE]
-> *Paso 8: Finalización*  
-> Seleccionar "Execute" nuevamente para completar la instalación. El proceso puede tomar varios minutos.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen9.avif)
-> [!NOTE]
-> *Paso 9: Conexión a MySQL*  
-> Seleccionamos la opción "Connect a Database" para conectarnos a nuestro servidor MySQL.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen10.avif)
-> [!NOTE]
-> *Paso 10: Store in Vault*  
-> Seleccionamos la opción Store in Vault luego, ingresamos la contraseña del usuario root.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen11.avif)
-> [!NOTE]
-> *Paso 11: Finalización*  
-> Listo!, hemos instalado el servidor MySQL y Workbench y estamos listos para empezar a trabajar.
+> **Una vez que guardemos los cambios del archivo pom.xml se descargaran las dependencias en nuestro proyecto**
+>  ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen3.avif) <br>
+> *Agregamos una clase main para realizar la conexion*
 
 
-## 2. Crear Base de datos
+## 2. De Java a MySQL
 
 > [!TIP]
-> Vamos a mostrar los comandos más basicos y el manejo de las funciones de Workbench. <br>
+> Vamos a utilizar el API de sql ya que vamos a necesitar las clases e interfaces del paquete <br>
+> ```java
+> package com.oregoom.mensajes;
+> import java.sql.*;
+>
+> public class Main {
+>
+>    public static void main(String[] args) throws SQLException {
+>        //Utilizamos la clase DriverManager para manajera la conexion
+>        Connection conectar = DriverManager.getConnection(
+>                "jdbc:mysql://localhost/mensajes_db?serverTimezone=UTC", "root", "root");                                                        
+>        //dentro del metodo getConnection() colocamos el url de nuestra BD, el usuario, la contrasena 
+>        //el servidor se encuentra de manera local
+>        //Nombre de la BD
+>        //Zona horaria
+>        System.out.println("Conexion exitosa");
+>    }
+>    
+> }         
+> ```
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen12.avif) <br>
 > [!NOTE] 
-> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB. <br>
+> Ejecutamos la main class y verificamos el mensaje en la consola <br>
+> ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion16/Imagenes/Imagen4.avif) <br>
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen13.avif) <br>
-> [!NOTE]
-> Podemos eliminar la DB recien creada mediante la opción "DROP SCHEMA". <br> 
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen14.avif) <br>
-> [!NOTE]
-> Podemos crear una DB directamente con el Query. <br>
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen15.avif) <br>
-> [!NOTE]
-> Podemos listar las DB directamente con el Query. <br>
-
-```sql
--- Crear una base de datos
-CREATE DATABASE mensajes_db;
-
---Eliminar una base de datos
-DROP DATABASE mensajes_db;
-
---Mostrar las bases de datos
-SHOW DATABASES;
-
-```
-## 3. Crear Tabla
+## 3. SELECT - desde Java
 > [!NOTE]
 > Una tabla es el lugar dónde vamos a almacenar los datos/registros.
 
@@ -133,7 +125,7 @@ CREATE TABLE mensajes_db.mensajes(
 );;
 
 ```
-## 4. Insertar registro
+## 4. INSERT INTO - desde Java
 > [!NOTE]
 > Una vez creada la tabla podemos seleccionar los registros que tenga esta.
 > Seleccionamos todos los registros de la tabla mensajes, actualmente está vacío. <br>
@@ -149,7 +141,7 @@ VALUES ("Hola Mundo", "Juan Suárez",current_time());
 > [!NOTE] 
 > Volvemos a listar los registros de la tabla para verificar la inserción. <br>
 
-## 5. Editar y Eliminar Registro
+## 5. UPDATE - desde Java
 > [!NOTE]
 > Vamos a editar o actualizar y también eliminar un registro.
 > Para editar un registro necesitamos el id y los campos a ser editados<br>
@@ -163,6 +155,11 @@ WHERE id_mensaje = 2;
 > [!NOTE] 
 > Volvemos a listar los registros de la tabla para verificar el cambio. <br>
 > ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen20.avif) <br>
+
+## 6. DELETE - desde Java
+> [!NOTE]
+> Vamos a editar o actualizar y también eliminar un registro.
+> Para editar un registro necesitamos el id y los campos a ser editados<br>
 
 
 > [!NOTE] 
