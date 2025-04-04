@@ -1,25 +1,24 @@
-# Curso de Java - Udemy
+# Sección 15: Introducción a MySQL
 
-Bienvenido al repositorio del curso de Java en Udemy. Este repositorio está organizado en ramas para facilitar el acceso a cada sección del curso.
+> [!NOTE]
+> #  La instalación y configuración completa del entorno MySQL incluye:
+> 
+> ### 🗄️ Servidor MySQL
+> - Instalación del motor de base de datos.
+> - Configuración de usuarios/contraseñas
+> ### 🖥️ MySQL Workbench
+> - Herramienta gráfica para administración
+> ### ⌨️ Integración CLI
+> - Acceso a comandos MySQL desde terminal nativo
+> - Variables de entorno configuradas globalmente
 
-## Estructura del repositorio
+## 1. Instalación de MySQL
+> [!IMPORTANT]
+> <p>Acceda al <a href="https://dev.mysql.com/downloads/installer/" target="_blank" rel="noopener noreferrer">sitio oficial</a> para descargar el instalador de MySQL.</p>
+![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen1.avif)
+*Captura del asistente de instalación de MySQL para Windows*
 
-- **main**: Contiene esta presentación con enlaces a cada sección del curso.
-- [Seccion5](https://github.com/juansuarezb/CursoJava/tree/Seccion5): Proyecto de Java correspondiente a la Sección 5.  
-  
-- [Seccion13](https://github.com/juansuarezb/CursoJava/tree/Seccion13): Proyecto de Java correspondiente a la Sección 13.  
-  
 
-## Cómo utilizar este repositorio
-
-1. **Navega por las ramas:**  
-   Haz clic en los enlaces de cada sección para acceder al contenido específico de esa parte del curso.
-
-2. **Leer los README de cada sección:**  
-   Cada rama contiene su propio README con información detallada sobre el proyecto, instrucciones de uso y notas relevantes.
-
-3. **Contribuir y aprender:**  
-   Si deseas colaborar o tienes sugerencias, ¡no dudes en abrir un issue o hacer un fork del repositorio!
 
    > [!NOTE]
 > Esto es información adicional que puede ayudar al usuario.
@@ -27,8 +26,7 @@ Bienvenido al repositorio del curso de Java en Udemy. Este repositorio está org
 > [!TIP]
 > Un consejo útil o una sugerencia.
 
-> [!IMPORTANT]
-> Información crucial.
+
 
 > [!WARNING]
 > Necesita la atención del usuario.
