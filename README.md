@@ -165,5 +165,10 @@ WHERE id_mensaje = 2;
 > ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen20.avif) <br>
 
 
-> [!CAUTION]
-> Consecuencias negativas si no haces caso.
+> [!NOTE] 
+> Finalmente, vamos a eliminar un registro mediante el comando: <br>
+
+```sql
+DELETE  FROM mensajes_db.mensajes 
+WHERE id_mensaje = 2;
+```
