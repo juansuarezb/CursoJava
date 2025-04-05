@@ -187,13 +187,251 @@
 > [!NOTE]
 > **Paso 1: Borramos nuestro archivo index.html**  
 > <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen19.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Click derecho & delete.</em></p>
->   <p><em>Creamos un archivo </em></p>
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen19.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
+>   <p><em>Click derecho & delete.</em></p> <br>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen20.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Creamos un archivo del tipo JSP</em></p> <rb></rb>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen21.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Nombramos al archivo y seleccionamos finalizar</em></p> <rb></rb>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen22.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Código del index.jsp</em></p> <rb></rb>
+> </div>
+
+> [!NOTE]  
+> <div align="center">
+> 
+> | Elemento | Propósito |
+> |----------|-----------|
+> | **`<%@page ... %>`** | Define directivas JSP, como el tipo de contenido y codificación. |
+> | **`<!DOCTYPE html>`** | Indica al navegador que se usará HTML5. |
+> | **`<html>`** | Etiqueta raíz de todo el documento HTML. |
+> | **`<head>`** | Contiene metadatos como codificación y título. |
+> | **`<meta charset>`** | Especifica la codificación de caracteres (UTF-8). |
+> | **`<title>`** | Define el título de la pestaña del navegador. |
+> | **`<body>`** | Contiene el contenido visible de la página. |
+> | **`<h1>Hello World!</h1>`** | Encabezado que muestra el texto en pantalla. |
+> 
+> </div>
+
+> [!NOTE]
+> **Paso 2: Colocamos un nuevo mensaje en el archivo index.jsp y ejecutamos con el click derecho**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen23.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen24.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Ejecución del programa en el localhost:8080</em></p> <rb></rb>
 > </div>
 
 
+> [!NOTE]
+> **Paso 3: Utilizamos la etiqueta <%%> y dentro podemos utilizar el lenguaje Java.**  
+```html
+<!-- Codigo JSP -->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!-- Codigo HTML -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hola desde JSP</h1>
+        <!-- Dentro de esta etiqueta podemos ejecutar código Java -->
+        <%
+            String nombre = "Juan Suarez";
+            int edad = 22;
+            out.println("Nombre: " + nombre + "\n");
+            out.println("Edad: " + edad);
+        %>
+    </body>
+</html>
+```
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen25.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Ejecución del programa en el localhost:8080</em></p> <rb></rb>
+> </div>
+
+> [!IMPORTANT]
+> Así, un archivo JSP nos permite trabajar con HTML y con XML.
+
 ## 4. Diseñar en JSP - Crear mensaje
+> [!IMPORTANT]
+> **Ahora, ya podemos empezar a diseñar nuestra intefaz de salida** <br>
+> *Boostrap nos ayudará con el diseño de la interfaz enfoncandonos en lo estilos para que se vea mejor* <br>
+> <p>Acceda al <a href="https://getbootstrap.com/docs/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de Bootstrap.</p>
+
+> [!NOTE]  
+> **Paso 1: Copiamos el código para utilizar los estilos CSS de Bootstrap (sin JS ni componentes interactivos)**  
+> **Y lo colocamos en el `<head>` de nuestro `index.jsp`**  
+>  
+> ```html
+> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+> rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+> crossorigin="anonymous">
+> ```
+>  
+> ```html
+> <head>
+>     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+>     <title>JSP Page</title>
+>     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+>     rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+>     crossorigin="anonymous">
+> </head>
+> ```
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen26.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Vemos que se ha cambiado el tipo de fuente.</em></p> <rb></rb>
+> </div> 
+
+> [!IMPORTANT]  
+> **Paso 2: Para el contenido vamos a utilizar algunos estilos**  
+>
+> <p>Acceda al <a href="https://getbootstrap.com/docs/5.3/customize/components/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de los componentes de Bootstrap.</p> 
+
+> [!NOTE]  
+> **Paso 3: Vamos a utilizar un estilo de los modales para ventanas emergentes**  
+> Acceda al [**sitio oficial**](https://getbootstrap.com/docs/5.3/components/modal/) de los modals de Bootstrap para más detalles.  
+> Copiamos el código de la página de Bootstrap y lo pegamos dentro del `<body>` de nuestro archivo `index.jsp`.
+
+> ```html
+> <!-- Button trigger modal -->
+> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+>   Launch demo modal
+> </button>
+> 
+> <!-- Modal -->
+> <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+>   <div class="modal-dialog">
+>     <div class="modal-content">
+>       <div class="modal-header">
+>         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+>         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+>       </div>
+>       <div class="modal-body">
+>         ...
+>       </div>
+>       <div class="modal-footer">
+>         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+>         <button type="button" class="btn btn-primary">Save changes</button>
+>       </div>
+>     </div>
+>   </div>
+> </div>
+> ```
+
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen27.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Al actualizar la página vemos un botón (sin funcionalidad)</em></p> <rb></rb>
+> </div> 
+
+> [!NOTE]  
+> **Paso 4: Modal estático (sin JavaScript)**  
+> Este modal aparecerá directamente en la página sin necesidad de interactuar con un botón.  
+> 
+> ```html
+> <%@page contentType="text/html" pageEncoding="UTF-8"%>
+> <!DOCTYPE html>
+> <html>
+>     <head>
+>         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+>         <title>JSP Page</title>
+>         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+>     </head>
+>     <body>
+>         <!-- Modal estático (sin funcionalidad JS) -->
+>         <div class="modal" style="display: block; position: initial;">
+>             <div class="modal-dialog">
+>                 <div class="modal-content">
+>                     <div class="modal-header">
+>                         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+>                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+>                     </div>
+>                     <div class="modal-body">
+>                         Contenido del modal aquí...
+>                     </div>
+>                     <div class="modal-footer">
+>                         <button type="button" class="btn btn-secondary">Close</button>
+>                         <button type="button" class="btn btn-primary">Save changes</button>
+>                     </div>
+>                 </div>
+>             </div>
+>         </div>
+>     </body>
+> </html>
+> ```
+> 
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen27.avif" alt="Modal estático visible al cargar la página" width="85%">
+>    <p><em>El modal aparece automáticamente al cargar la página (sin botón)</em></p>
+> </div>
+
+> [!NOTE]  
+> **Paso 4: Entrys para el mensaje y el autor**  
+> Código para los campos de formulario dentro del modal:
+> 
+> ```html
+> <div class="modal-body">
+>     <div class="mb-3">
+>         <label for="exampleFormControlInput1" class="form-label">Email address</label>
+>         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+>     </div>
+>     <div class="mb-3">
+>         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+>         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+>     </div>
+> </div>
+> ```
+> 
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen28.avif" alt="Modal estático visible al cargar la página" width="85%">
+> </div>
+
+> [!NOTE]  
+> **Paso 5: Formulario completo para mensajes**  
+> Código completo del modal con campos personalizados para mensajes:
+> 
+> ```html
+> <%@page contentType="text/html" pageEncoding="UTF-8"%>
+> <!DOCTYPE html>
+> <html>
+>     <head>
+>         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+>         <title>JSP Page</title>
+>         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+>     </head>
+>     <body>
+>         <!-- Modal estático (sin funcionalidad JS) -->
+>         <div class="modal" style="display: block; position: initial;">
+>             <div class="modal-dialog">
+>                 <div class="modal-content">
+>                     <div class="modal-header">
+>                         <h1 class="modal-title fs-5">Crear mensaje</h1>            
+>                     </div>
+>                     <div class="modal-body">
+>                         <div class="mb-3">
+>                             <label for="exampleFormControlTextarea1" class="form-label">Ingrese el Mensaje</label>
+>                             <textarea class="form-control" name="mensaje" rows="3"></textarea>
+>                         </div>
+>                         <div class="mb-3">
+>                             <label for="exampleFormControlInput1" class="form-label">Autor</label>
+>                             <input type="text" class="form-control" name="autor">
+>                         </div>
+>                     </div>
+>                     <div class="modal-footer">
+>                         <button type="button" class="btn btn-primary" name="enviar">Enviar</button>
+>                     </div>
+>                 </div>
+>             </div>
+>         </div>
+>     </body>
+> </html>
+> ```
+> 
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen29.avif" alt="Formulario completo para mensajes" width="85%">
+> </div>
 
 ## 5. Diseñar en JSP - Mostrar mensaje
 
