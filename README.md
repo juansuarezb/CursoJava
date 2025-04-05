@@ -104,6 +104,78 @@
 > </div> 
 
 ## 2. Hola Mundo Web
+> [!NOTE]  
+> Ahora que ya tenemos el servidor, vamos a crear un nuevo proyecto y lo vamos a ejecutar en el servidor con una aplicación de Java web el "Hola Mundo"
+
+> [!NOTE] 
+> **Paso 1: Configurar el servidor**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen13.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Actualmente, no tenemos ningun servidor configurado.</em></p>
+> </div>
+
+> [!NOTE]
+> **Paso 2: Seleccionar el Apache Tomcat**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen14.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Luego, seleccionamos next</em></p>
+> </div>
+
+> [!NOTE]
+> **Paso 3: Instalación y detalles de login**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen15.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Primero, seleccionamos la carpeta en la cual instalamos el Apache Tomcat</em></p> <br>
+>   <p><em>Luego, ingresamos el usuario y contraseña de nuestro apache y seleccionamos Finish</em></p> <br>
+>   <p><em>Finalmente, podemos arrancar el servidor dando click derecho en el menú de navegación de los servicios</em></p>
+> </div>
+
+> [!NOTE]
+> **Paso 4: Creación de un nuevo proyeto con el servidor encendido**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Primero, creamos un proyecto con Maven para que nos ayude con las dependencias</em></p> <br>
+>   <p><em>Luego, Selecionamos Web application</em></p> <br>
+>   <p><em>Finalmente, podemos arrancar el servidor dando click derecho en el menú de navegación de los servicios</em></p> <br>
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen17.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
+>   <p><em>Escogemos el servidor de Apache tomcat y la version de Java empreserial</em></p>
+> </div>
+
+> [!NOTE]
+> **Paso 5: Esperamos a que se cree el proyecto**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Una vez creado el proyecto podemos navegar en el mismo</em></p> <br>
+> </div>
+
+> [!NOTE]
+> **Estrucutura del proyecto"  
+> <div align="center">
+![Descripción de la imagen](https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen1.avif)
+| Componente | Función | Tecnología Relacionada |
+|------------|---------|-----------------------|
+| 📁 **WEB-INF** | Seguridad y configuración web | Servlet API |
+| 🌐 **index.html** | Interfaz de usuario principal | HTML5 |
+| 🔗 **RESTful Web Services** | Servicios API REST | JAX-RS (JavaEE) |
+| 📦 **javax.mail-1.6.0.jar** | Manejo de correos electrónicos | JavaMail API |
+| ⚙️ **nb-configuration.xml** | Configuración del IDE | NetBeans |
+
+</div>
+
+> [!NOTE]
+> **Paso 6: Debemos de hacer un clean and build de nuestro proyecto para que se instalen las depedencias faltantes.**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Una vez creado el proyecto podemos navegar en el mismo</em></p> <br>
+> </div>
+
+
+> [!NOTE]
+> **Paso 6: Agregamos la dependencia de mysql al archivo pom.xml**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Una vez creado el proyecto podemos navegar en el mismo</em></p> <br>
+> </div>
 
 ## 3. ¿Qué es JSP?
 
