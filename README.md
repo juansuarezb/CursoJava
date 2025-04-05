@@ -484,7 +484,6 @@
 >     </div>
 > </div>
 > ```
-> 
 > <div align="center">
 >   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen29.avif" alt="Vista de mensajes en modal con tarjeta" width="85%">
 > </div>
@@ -501,13 +500,10 @@
 > ```
 > <div align="center">
 >    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen30.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Vemos que se ha cambiado el tipo de fuente.</em></p> <rb></rb>
+>   
 > </div> 
 
-> [!IMPORTANT]  
-> **Paso 2: Para el contenido vamos a utilizar algunos estilos**  
->
-> <p>Acceda al <a href="https://getbootstrap.com/docs/5.3/customize/components/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de los componentes de Bootstrap.</p> 
+
 
 
 
