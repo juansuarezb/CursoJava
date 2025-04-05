@@ -434,5 +434,41 @@
 > </div>
 
 ## 5. Diseñar en JSP - Mostrar mensaje
+> [!IMPORTANT]
+> **Ahora, ya podemos empezar a diseñar nuestra intefaz de salida** <br>
+> *Boostrap nos ayudará con el diseño de la interfaz enfoncandonos en lo estilos para que se vea mejor* <br>
+> <p>Acceda al <a href="https://getbootstrap.com/docs/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de Bootstrap.</p>
+
+> [!NOTE]  
+> **Paso 1: Copiamos el código para utilizar los estilos CSS de Bootstrap (sin JS ni componentes interactivos)**  
+> **Y lo colocamos en el `<head>` de nuestro `index.jsp`**  
+>  
+> ```html
+> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+> rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+> crossorigin="anonymous">
+> ```
+>  
+> ```html
+> <head>
+>     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+>     <title>JSP Page</title>
+>     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+>     rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+>     crossorigin="anonymous">
+> </head>
+> ```
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen26.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Vemos que se ha cambiado el tipo de fuente.</em></p> <rb></rb>
+> </div> 
+
+> [!IMPORTANT]  
+> **Paso 2: Para el contenido vamos a utilizar algunos estilos**  
+>
+> <p>Acceda al <a href="https://getbootstrap.com/docs/5.3/customize/components/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de los componentes de Bootstrap.</p> 
+
+
+
 
 ## 6. Metodos GET y POST
