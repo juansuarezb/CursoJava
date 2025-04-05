@@ -7,31 +7,37 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     </head>
     <body>
-        <!-- Modal estático (sin funcionalidad JS) -->
+        <!-- Modal para crear mensajes -->
         <div class="modal" style="display: block; position: initial;">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5">Crear mensaje</h1>            
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Ingrese el Mensaje</label>
-                            <textarea class="form-control" name="mensaje" rows="3"></textarea>
+                    <form action="index.jsp" method="POST">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Crear mensaje</h1>            
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Autor</label>
-                            <input type="text" class="form-control" name="mensaje">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
+                                <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="autorInput" class="form-label">Autor</label>
+                                <input type="text" class="form-control" id="autorInput" name="autor" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" name="enviar">Enviar</button>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <div class="modal" style="display: block; position: initial;">
+        <%
+            String mensaje = request.getParameter("mensaje");
+            String autor = request.getParameter("autor");
+        %>
+        <!-- Modal para mostrar mensajes -->
+        <div class="modal" style="display: block; position: initial; margin-top: 20px;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -40,18 +46,18 @@
                     <div class="modal-body">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Juan Suarez</h5>
-                                <p class="card-text"> "Hola desde Java"</p>
+                                <h5 class="card-title"><%=autor%></h5>
+                                <p class="card-text"><%=mensaje%></p>
                                 <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
-                                <a href="#" class="card-link">Editar</a>
-                                <a href="#" class="card-link">Eliminar</a>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
+                                    <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-
     </body>
 </html>

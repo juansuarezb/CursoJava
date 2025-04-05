@@ -503,9 +503,105 @@
 >   
 > </div> 
 
-
-
-
-
-
 ## 6. Metodos GET y POST
+> [!IMPORTANT]
+> **Ahora, vamos a agregar las funcionalidad de enviar un mensaje, ya que actualmente nuestro programa no hace nada** <br>
+> *Para eso, vamos a agregar una etiqueta form con una acción y con el metodo get<br>
+> *Asi, en la barra de navegación se mostrará los datos enviados"
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen31.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
+> </div>
+
+> [!NOTE]
+> **Luego, para recuperar la información y presentarla en el modal para mostrar mensajes, vamos a utilizar los tags de java** <br>
+> *Así, declaramos unas variables para almacenar el autor y el mensaje y los pasamos en los respectivos campos"
+> ```html
+> <!-- Modal para crear mensajes -->
+>        <div class="modal" style="display: block; position: initial;">
+>            <div class="modal-dialog">
+>                <div class="modal-content">
+>                    <form action="index.jsp" method="GET">
+>                        <div class="modal-header">
+>                            <h1 class="modal-title fs-5">Crear mensaje</h1>            
+>                        </div>
+>                        <div class="modal-body">
+>                            <div class="mb-3">
+>                                <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
+>                                <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
+>                            </div>
+>                            <div class="mb-3">
+>                                <label for="autorInput" class="form-label">Autor</label>
+>                                <input type="text" class="form-control" id="autorInput" name="autor" required>
+>                            </div>
+>                        </div>
+>                        <div class="modal-footer">
+>                            <button type="submit" class="btn btn-primary">Enviar</button>
+>                        </div>
+>                    </form>
+>                </div>
+>            </div>
+>       </div>
+> 
+>        <%
+>            String mensaje = request.getParameter("mensaje");
+>            String autor = request.getParameter("autor");
+>        %>
+>        <!-- Modal para mostrar mensajes -->
+>        <div class="modal" style="display: block; position: initial; margin-top: 20px;">
+>            <div class="modal-dialog">
+>                <div class="modal-content">
+>                    <div class="modal-header">
+>                        <h1 class="modal-title fs-5">Todos los mensajes</h1>            
+>                    </div>
+>                    <div class="modal-body">
+>                        <div class="card">
+>                            <div class="card-body">
+>                                <h5 class="card-title"><%=autor%></h5>
+>                                <p class="card-text"><%=mensaje%></p>
+>                                <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
+>                                <div class="d-flex gap-2">
+>                                    <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
+>                                    <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
+>                                </div>
+>                            </div>
+>                        </div>
+>                    </div>
+>                </div>
+>            </div>
+>        </div>
+> ```
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen32.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
+> </div> 
+
+> [!NOTE]
+> **Finalmente, para ocultar la información de la barra de búsqueda podemos utilizar el método POST.** <br>
+> ```html
+> <!-- Modal para crear mensajes -->
+>        <div class="modal" style="display: block; position: initial;">
+>            <div class="modal-dialog">
+>                <div class="modal-content">
+>                    <form action="index.jsp" method="POST">
+>                        <div class="modal-header">
+>                            <h1 class="modal-title fs-5">Crear mensaje</h1>            
+>                        </div>
+>                        <div class="modal-body">
+>                            <div class="mb-3">
+>                                <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
+>                                <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
+>                            </div>
+>                            <div class="mb-3">
+>                                <label for="autorInput" class="form-label">Autor</label>
+>                                <input type="text" class="form-control" id="autorInput" name="autor" required>
+>                            </div>
+>                        </div>
+>                        <div class="modal-footer">
+>                            <button type="submit" class="btn btn-primary">Enviar</button>
+>                        </div>
+>                    </form>
+>                </div>
+>            </div>
+>       </div>
+> > <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen33.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
+> </div> 
