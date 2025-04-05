@@ -178,6 +178,20 @@
 > </div>
 
 ## 3. ¿Qué es JSP?
+> [!NOTE]  
+> **JSP O Java Server Page**  
+> - Es un archivo en el cual podemos trabajar con Html y Xml <br>
+> - Es similar a un archivo de PHP en el cuál podemos trabajar con código Java mediante etiquetas.
+> - 
+
+> [!NOTE]
+> **Paso 1: Borramos nuestro archivo index.html**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen19.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   <p><em>Click derecho & delete.</em></p>
+>   <p><em>Creamos un archivo </em></p>
+> </div>
+
 
 ## 4. Diseñar en JSP - Crear mensaje
 
