@@ -435,20 +435,61 @@
 
 ## 5. Diseñar en JSP - Mostrar mensaje
 > [!IMPORTANT]
-> **Ahora, ya podemos empezar a diseñar nuestra intefaz de salida** <br>
+> **Ahora, ya que tenemos el diseño de crear mensaje, ahora vamos a diseñar el de mostrar mensaje** <br>
 > *Boostrap nos ayudará con el diseño de la interfaz enfoncandonos en lo estilos para que se vea mejor* <br>
-> <p>Acceda al <a href="https://getbootstrap.com/docs/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de Bootstrap.</p>
+> 
 
 > [!NOTE]  
-> **Paso 1: Copiamos el código para utilizar los estilos CSS de Bootstrap (sin JS ni componentes interactivos)**  
-> **Y lo colocamos en el `<head>` de nuestro `index.jsp`**  
+> **Paso 1: <p>Accedemos a la sección Card del <a href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de Bootstrap.</p>**  
+> **Buscamos la mejor opción para mostrar un mensaje, lo copiamos debajo del último div realizado.**  
 >  
 > ```html
-> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-> rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-> crossorigin="anonymous">
+> <div class="card" style="width: 18rem;">
+>  <div class="card-body">
+>    <h5 class="card-title">Card title</h5>
+>    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+>    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+>    <a href="#" class="card-link">Card link</a>
+>    <a href="#" class="card-link">Another link</a>
+>  </div>
+></div>
 > ```
+
+> [!NOTE]  
+> **Paso 2: Corrección de formato y posición de la tarjeta**  
+> <p>Para solucionar los problemas de formato y posición:</p> <br>
+> 1. Copiamos la estructura del modal "Crear mensaje" <br>
+> 2. Adaptamos el contenido para mostrar mensajes existentes <br> 
+> 3. Agregamos botones de acción para cada mensaje. <br> 
 >  
+> ```html
+> <div class="modal" style="display: block; position: initial;">
+>     <div class="modal-dialog">
+>         <div class="modal-content">
+>             <div class="modal-header">
+>                 <h1 class="modal-title fs-5">Todos los mensajes</h1>            
+>             </div>
+>             <div class="modal-body">
+>                 <div class="card">
+>                     <div class="card-body">
+>                         <h5 class="card-title">Juan Suarez</h5>
+>                         <p class="card-text">"Hola desde Java"</p>
+>                         <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
+>                         <a href="#" class="card-link">Editar</a>
+>                         <a href="#" class="card-link">Eliminar</a>
+>                     </div>
+>                 </div>
+>             </div>
+>         </div>
+>     </div>
+> </div>
+> ```
+> 
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen29.avif" alt="Vista de mensajes en modal con tarjeta" width="85%">
+> </div>
+
+ 
 > ```html
 > <head>
 >     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -459,7 +500,7 @@
 > </head>
 > ```
 > <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen26.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen30.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
 >   <p><em>Vemos que se ha cambiado el tipo de fuente.</em></p> <rb></rb>
 > </div> 
 
