@@ -30,5 +30,28 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal" style="display: block; position: initial;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Todos los mensajes</h1>            
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Juan Suarez</h5>
+                                <p class="card-text"> "Hola desde Java"</p>
+                                <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
+                                <a href="#" class="card-link">Editar</a>
+                                <a href="#" class="card-link">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
