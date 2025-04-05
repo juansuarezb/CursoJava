@@ -187,11 +187,73 @@
 > [!NOTE]
 > **Paso 1: Borramos nuestro archivo index.html**  
 > <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen19.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Click derecho & delete.</em></p>
->   <p><em>Creamos un archivo </em></p>
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen19.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
+>   <p><em>Click derecho & delete.</em></p> <br>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen20.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Creamos un archivo del tipo JSP</em></p> <rb></rb>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen21.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Nombramos al archivo y seleccionamos finalizar</em></p> <rb></rb>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen22.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Código del index.jsp</em></p> <rb></rb>
 > </div>
 
+> [!NOTE]  
+> <div align="center">
+> 
+> | Elemento | Propósito |
+> |----------|-----------|
+> | **`<%@page ... %>`** | Define directivas JSP, como el tipo de contenido y codificación. |
+> | **`<!DOCTYPE html>`** | Indica al navegador que se usará HTML5. |
+> | **`<html>`** | Etiqueta raíz de todo el documento HTML. |
+> | **`<head>`** | Contiene metadatos como codificación y título. |
+> | **`<meta charset>`** | Especifica la codificación de caracteres (UTF-8). |
+> | **`<title>`** | Define el título de la pestaña del navegador. |
+> | **`<body>`** | Contiene el contenido visible de la página. |
+> | **`<h1>Hello World!</h1>`** | Encabezado que muestra el texto en pantalla. |
+> 
+> </div>
+
+> [!NOTE]
+> **Paso 2: Colocamos un nuevo mensaje en el archivo index.jsp y ejecutamos con el click derecho**  
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen23.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen24.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Ejecución del programa en el localhost:8080</em></p> <rb></rb>
+> </div>
+
+
+> [!NOTE]
+> **Paso 3: Utilizamos la etiqueta <%%> y dentro podemos utilizar el lenguaje Java.**  
+```html
+<!-- Codigo JSP -->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!-- Codigo HTML -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hola desde JSP</h1>
+        <!-- Dentro de esta etiqueta podemos ejecutar código Java -->
+        <%
+            String nombre = "Juan Suarez";
+            int edad = 22;
+            out.println("Nombre: " + nombre + "\n");
+            out.println("Edad: " + edad);
+        %>
+    </body>
+</html>
+```
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen25.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
+>   <p><em>Ejecución del programa en el localhost:8080</em></p> <rb></rb>
+> </div>
+
+> [!IMPORTANT]
+> Así, un archivo JSP nos permite trabajar con HTML y con XML.
 
 ## 4. Diseñar en JSP - Crear mensaje
 
