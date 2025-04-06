@@ -1,3 +1,6 @@
+<%@page import="com.oregoom.mensajes.Mensaje"%>
+<%@page import="java.util.*"%>
+<%@page import="com.oregoom.mensajes.MensajeDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,10 +35,6 @@
                 </div>
             </div>
         </div>
-        <%
-            String mensaje = request.getParameter("mensaje");
-            String autor = request.getParameter("autor");
-        %>
         <!-- Modal para mostrar mensajes -->
         <div class="modal" style="display: block; position: initial; margin-top: 20px;">
             <div class="modal-dialog">
@@ -43,12 +42,24 @@
                     <div class="modal-header">
                         <h1 class="modal-title fs-5">Todos los mensajes</h1>            
                     </div>
+                    <!-- Este codigo debemos de iterar para cada mensaje -->
+                    <%
+                        MensajeDao mensajeDao = new MensajeDao();
+                        List<Mensaje> mensajes = mensajeDao.seleccionar();
+                        //Invertir la lista para mostrar el ultimo mensaje
+                        Collections.reverse(mensajes);
+                        for(Mensaje mensaje : mensajes){
+                            
+                        
+                        
+                    
+                    %>
                     <div class="modal-body">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><%=autor%></h5>
-                                <p class="card-text"><%=mensaje%></p>
-                                <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
+                                <h5 class="card-title"><%=mensaje.getAutor()%></h5>
+                                <p class="card-text"><%=mensaje.getMensaje()%></p>
+                                <p class="blockquote-footer"><cite><%=mensaje.getFecha()%></cite></p>
                                 <div class="d-flex gap-2">
                                     <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
                                     <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
@@ -56,8 +67,10 @@
                             </div>
                         </div>
                     </div>
+                   <%}%>             
                 </div>
             </div>
+                                
         </div>
     </body>
 </html>

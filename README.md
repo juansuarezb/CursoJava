@@ -1,336 +1,524 @@
-# Sección 17: PD - Introducción a Java Web
+ Sección 18: PD - Proyecto de Mensajes
 
 > [!NOTE]
 > **Temas cubiertos:**
-> - Instalar Apache Tomcat 9 
-> - Hola Mundo Web 
-> - ¿Qué es JSP?
-> - Diseñar en JSP - Crear mensaje
-> - Diseñar en JSP - Mostrar mensaje
-> - Metodos GET y POST
+>  <ul>
+>    <li><strong>Conexión a MySQL</strong></li>
+>    <li><strong>Clase Mensaje</strong></li>
+>    <li><strong>Listar datos del tipo objeto</strong></li>
+>    <li><strong>Insertar datos del tipo objeto</strong></li>
+>    <li><strong>Editar datos del tipo objeto</strong></li>
+>    <li><strong>Eliminar datos del tipo objeto</strong></li>
+>    <li><strong>Mostrar Mensaje</strong></li>
+>    <li><strong>Editar Mensaje</strong></li>
+>    <li><strong>Eliminar Mensaje</strong></li>
+>  </ul>
 
-## 1. Instalar Apache Tomcat 9
-
-> [!IMPORTANT]
-> **Descarga e instalación de Apache Tomcat 9**  
-> <p>Acceda al <a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener noreferrer">sitio oficial</a> para descargar el instalador.</p>
-
-> [!NOTE]
-> **Paso 1: Descargar el instalador**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen1.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Seleccione el instalador Windows Service (32/64-bit) para descargar el instaldor.</em></p>
-> </div>
+## 1. Conexión a MySQL
 
 > [!NOTE]
-> **Paso 2: Ejecutamos la descarga**
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen2.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Seleccionamos Next y aceptar condiciones hasta llegar al siguiente paso.</em></p>
-> </div>
-
-> [!NOTE]
-> **Paso 3: Ejecución**
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen3.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Seleccionamos el tipo de instalación normal</em></p>
-> </div>   
-
-> [!NOTE]
-> **Paso 4: Tipo de instalación**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen4.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Seleccionamos el tipo de instalación normal</em></p>
-> </div> 
-
-> [!WARNING]
-> *Configuración clave*  
-> **¡Atención!** Guardar esta contraseña generada, es fundamental para acceder al servidor. <br>
-> **Además, es importante configurar el puerto, la recomendación es dejar en el 8080**
-
-
-> [!NOTE]
-> **Paso 5: Buscar el path donde tenemos instalado el JDK**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen5.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Seleccionamos el path donde esta el jdk (puede seleccionarse automáticamente)</em></p>
-> </div> 
-
-> [!NOTE]
-> **Paso 6: Configuración de variables del sistema** 
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen6.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Seleccionamos la opción de propiedades sobre nuestro equipo.</em></p>
-> </div> 
-
-> [!NOTE]
-> **Paso 7: Accedemos a configuración avanzada del sistema**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen7.avif" alt="Ejecucion instalador" width="85%">
-> </div> 
-
-> [!NOTE]
-> *Paso 8: Seleccionamos variables de entorno*  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen8.avif" alt="Ejecucion instalador" width="85%">
-> </div> 
-
-> [!NOTE]
-> **Paso 9:**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen9.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Agregamos una variable del sistema llamado "CATALINA_HOME" </em></p>
-> </div> 
-
-> [!NOTE]
-> **Paso 10:**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen10.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Seleccionamos la variable path y agregamos la ruta hacia la carpeta "bin" del path donde instalamos el apache</em></p>
-> </div> 
-
-> [!NOTE]
-> **Paso 11: Ejecución del apache**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen11.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Ejecutamos el archivo tomcat9.exe</em></p>
-> </div> 
-
-> [!NOTE]
-> **Paso 11: Comprobación de la instalación del Apache Tomcat 9**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen12.avif" alt="Ejecucion instalador" width="85%">
->   <p><em>Ingresamos al localhost en el puerto 8080 y comprobamos que ingresamos al apache.</em></p>
-> </div> 
-
-## 2. Hola Mundo Web
-> [!NOTE]  
-> Ahora que ya tenemos el servidor, vamos a crear un nuevo proyecto y lo vamos a ejecutar en el servidor con una aplicación de Java web el "Hola Mundo"
-
-> [!NOTE] 
-> **Paso 1: Configurar el servidor**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen13.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Actualmente, no tenemos ningun servidor configurado.</em></p>
-> </div>
-
-> [!NOTE]
-> **Paso 2: Seleccionar el Apache Tomcat**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen14.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Luego, seleccionamos next</em></p>
-> </div>
-
-> [!NOTE]
-> **Paso 3: Instalación y detalles de login**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen15.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Primero, seleccionamos la carpeta en la cual instalamos el Apache Tomcat</em></p> <br>
->   <p><em>Luego, ingresamos el usuario y contraseña de nuestro apache y seleccionamos Finish</em></p> <br>
->   <p><em>Finalmente, podemos arrancar el servidor dando click derecho en el menú de navegación de los servicios</em></p>
-> </div>
-
-> [!NOTE]
-> **Paso 4: Creación de un nuevo proyeto con el servidor encendido**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Primero, creamos un proyecto con Maven para que nos ayude con las dependencias</em></p> <br>
->   <p><em>Luego, Selecionamos Web application</em></p> <br>
->   <p><em>Finalmente, podemos arrancar el servidor dando click derecho en el menú de navegación de los servicios</em></p> <br>
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen17.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
->   <p><em>Escogemos el servidor de Apache tomcat y la version de Java empreserial</em></p>
-> </div>
-
-> [!NOTE]
-> **Paso 5: Esperamos a que se cree el proyecto**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Una vez creado el proyecto podemos navegar en el mismo</em></p> <br>
-> </div>
-
-> [!NOTE]
-> **Estrucutura del proyecto"  
-> <div align="center">
-![Descripción de la imagen](https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen1.avif)
-| Componente | Función | Tecnología Relacionada |
-|------------|---------|-----------------------|
-| 📁 **WEB-INF** | Seguridad y configuración web | Servlet API |
-| 🌐 **index.html** | Interfaz de usuario principal | HTML5 |
-| 🔗 **RESTful Web Services** | Servicios API REST | JAX-RS (JavaEE) |
-| 📦 **javax.mail-1.6.0.jar** | Manejo de correos electrónicos | JavaMail API |
-| ⚙️ **nb-configuration.xml** | Configuración del IDE | NetBeans |
-
-</div>
-
-> [!NOTE]
-> **Paso 6: Debemos de hacer un clean and build de nuestro proyecto para que se instalen las depedencias faltantes.**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Una vez creado el proyecto podemos navegar en el mismo</em></p> <br>
-> </div>
-
-
-> [!NOTE]
-> **Paso 6: Agregamos la dependencia de mysql al archivo pom.xml**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen16.avif" alt="Página de descarga Tomcat 9" width="85%">
->   <p><em>Una vez creado el proyecto podemos navegar en el mismo</em></p> <br>
-> </div>
-
-## 3. ¿Qué es JSP?
-> [!NOTE]  
-> **JSP O Java Server Page**  
-> - Es un archivo en el cual podemos trabajar con Html y Xml <br>
-> - Es similar a un archivo de PHP en el cuál podemos trabajar con código Java mediante etiquetas.
-> - 
-
-> [!NOTE]
-> **Paso 1: Borramos nuestro archivo index.html**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen19.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
->   <p><em>Click derecho & delete.</em></p> <br>
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen20.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Creamos un archivo del tipo JSP</em></p> <rb></rb>
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen21.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Nombramos al archivo y seleccionamos finalizar</em></p> <rb></rb>
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen22.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Código del index.jsp</em></p> <rb></rb>
-> </div>
-
-> [!NOTE]  
-> <div align="center">
-> 
-> | Elemento | Propósito |
-> |----------|-----------|
-> | **`<%@page ... %>`** | Define directivas JSP, como el tipo de contenido y codificación. |
-> | **`<!DOCTYPE html>`** | Indica al navegador que se usará HTML5. |
-> | **`<html>`** | Etiqueta raíz de todo el documento HTML. |
-> | **`<head>`** | Contiene metadatos como codificación y título. |
-> | **`<meta charset>`** | Especifica la codificación de caracteres (UTF-8). |
-> | **`<title>`** | Define el título de la pestaña del navegador. |
-> | **`<body>`** | Contiene el contenido visible de la página. |
-> | **`<h1>Hello World!</h1>`** | Encabezado que muestra el texto en pantalla. |
-> 
-> </div>
-
-> [!NOTE]
-> **Paso 2: Colocamos un nuevo mensaje en el archivo index.jsp y ejecutamos con el click derecho**  
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen23.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen24.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Ejecución del programa en el localhost:8080</em></p> <rb></rb>
-> </div>
-
-
-> [!NOTE]
-> **Paso 3: Utilizamos la etiqueta <%%> y dentro podemos utilizar el lenguaje Java.**  
-```html
-<!-- Codigo JSP -->
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!-- Codigo HTML -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hola desde JSP</h1>
-        <!-- Dentro de esta etiqueta podemos ejecutar código Java -->
-        <%
-            String nombre = "Juan Suarez";
-            int edad = 22;
-            out.println("Nombre: " + nombre + "\n");
-            out.println("Edad: " + edad);
-        %>
-    </body>
-</html>
-```
-> <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen25.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Ejecución del programa en el localhost:8080</em></p> <rb></rb>
-> </div>
-
-> [!IMPORTANT]
-> Así, un archivo JSP nos permite trabajar con HTML y con XML.
-
-## 4. Diseñar en JSP - Crear mensaje
-> [!IMPORTANT]
-> **Ahora, ya podemos empezar a diseñar nuestra intefaz de salida** <br>
-> *Boostrap nos ayudará con el diseño de la interfaz enfoncandonos en lo estilos para que se vea mejor* <br>
-> <p>Acceda al <a href="https://getbootstrap.com/docs/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de Bootstrap.</p>
-
-> [!NOTE]  
-> **Paso 1: Copiamos el código para utilizar los estilos CSS de Bootstrap (sin JS ni componentes interactivos)**  
-> **Y lo colocamos en el `<head>` de nuestro `index.jsp`**  
->  
+> **Paso 1: Para conectarte a MySQL en tu proyecto debes agregar la dependencia de mysql-connector-java en tu archivo pom.xml**  
 > ```html
-> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-> rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-> crossorigin="anonymous">
+> <dependency>
+>    <groupId>mysql</groupId>
+>    <artifactId>mysql-connector-java</artifactId>
+>    <version>8.0.30</version> <!-- Reemplaza con la última versión estable si es necesario -->
+> </dependency>
 > ```
->  
-> ```html
-> <head>
->     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
->     <title>JSP Page</title>
->     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
->     rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
->     crossorigin="anonymous">
-> </head>
-> ```
-> <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen26.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Vemos que se ha cambiado el tipo de fuente.</em></p> <rb></rb>
-> </div> 
+> *Gurdamos los cambios (Ctrl + S) y se descargará la dependencia necesaria, finalmente ejecutamos Clean and Build para el proyecto
+> en caso de que se tengan que instalar otra dependencia faltante.**
 
-> [!IMPORTANT]  
-> **Paso 2: Para el contenido vamos a utilizar algunos estilos**  
+> [!NOTE]
+> **Paso 2: Creamos una clase Conexion para establer la conexión con MySQL**
+>  ```java
+> package com.oregoom.mensajes;
+> import java.sql.*;
+>  public class Conexion {
+>    //Final para que no sea modificable
+>    private static final String URL = "jdbc:mysql://localhost/mensajes_db?serverTimezone=UTC";
+>    private static final String USR = "root";
+>    private static final String PASS = "root";
+>    
+>   public static Connection getConexion() throws SQLException, ClassNotFoundException{      
+>        //Tenemos que agregar una configuracion para el driver
+>        Class.forName("com.mysql.cj.jdbc.Driver");
+>        return DriverManager.getConnection(URL, USR, PASS);    
+>   }
+>    //Sobrecarga de metod
+>    public static void cerrar(ResultSet rs) throws SQLException{
+>        rs.close();
+>    }
+>    public static void cerrar(PreparedStatement ps) throws SQLException{
+>        ps.close();
+>    }   
+>    public static void cerrar(Connection conn) throws SQLException{
+>        conn.close();
+>    }
+> }
+
+> [!NOTE]  
+> <div align="center"> 
 >
-> <p>Acceda al <a href="https://getbootstrap.com/docs/5.3/customize/components/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de los componentes de Bootstrap.</p> 
+> | Componente                | Función                                                                 |
+> |---------------------------|-------------------------------------------------------------------------|
+> | **URL**                    | Define la URL de conexión a la base de datos MySQL (usando `localhost`) |
+> | **USR**                    | Contiene el nombre de usuario para la base de datos (`root`)            |
+> | **PASS**                   | Contiene la contraseña para la base de datos (`root`)                   |
+> | **Class.forName()**        | Carga el driver de MySQL para establecer la conexión                    |
+> | **DriverManager.getConnection()** | Establece la conexión con la base de datos usando URL, usuario y contraseña |
+> | **getConexion()**          | Método que devuelve una conexión a la base de datos                      |
+> | **cerrar(ResultSet)**      | Cierra un `ResultSet` para liberar recursos                             |
+> | **cerrar(PreparedStatement)** | Cierra un `PreparedStatement` para liberar recursos                   |
+> | **cerrar(Connection)**     | Cierra una `Connection` para liberar recursos                          |
+> </div>
+>  
+ ![image](https://github.com/user-attachments/assets/badd875d-5dfa-43e4-b6cb-ec6c8ca42b93)
+
+
+## 2. Clase mensaje
+> [!NOTE]
+> **Vamos a considerar a cada mensaje como un objeto para mayor facilidad de abstracción debido al lenguaje java**
+> *Para ello vamos a crear una clase Mensaje la cual tendrá un atributo por cada "categoría" o variable* 
+> ```java
+> package com.oregoom.mensajes;
+> public class Mensaje {
+>    private int id;
+>    private String mensaje;
+>    private String autor;
+>    private String fecha;
+>    //Sobrecarga de constructor
+>    public Mensaje() {
+>    }
+>    //Constructor para eliminar un mensaje mediante el id
+>   public Mensaje(int id) {
+>        this.id = id;
+>    }
+>    //Constructor para ingresar 
+>    public Mensaje(String mensaje, String autor) {
+>        this.mensaje = mensaje;
+>        this.autor = autor;
+>    }
+>    //Constructor para actualizar un mensaje
+>    public Mensaje(int id, String mensaje, String autor) {
+>        this.id = id;
+>        this.mensaje = mensaje;
+>        this.autor = autor;
+>    }
+>    //Constructor para recupear un mensaje
+>    public Mensaje(int id, String mensaje, String autor, String fecha) {
+>        this.id = id;
+>        this.mensaje = mensaje;
+>        this.autor = autor;
+>        this.fecha = fecha;
+>    }
+>    public int getId() {
+>        return id;
+>    }
+>    public void setId(int id) {
+>        this.id = id;
+>    }
+>    public String getMensaje() {
+>        return mensaje;
+>    }
+>    public void setMensaje(String mensaje) {
+>        this.mensaje = mensaje;
+>    }
+>    public String getAutor() {
+>        return autor;
+>    }
+>    public void setAutor(String autor) {
+>        this.autor = autor;
+>    }
+>    public String getFecha() {
+>        return fecha;
+>    }
+>
+>    public void setFecha(String fecha) {
+>        this.fecha = fecha;
+>    }
+>
+>    @Override
+>    public String toString() {
+>        StringBuilder sb = new StringBuilder();
+>        sb.append("Mensaje{");
+>        sb.append("id=").append(id);
+>        sb.append(", mensaje=").append(mensaje);
+>        sb.append(", autor=").append(autor);
+>        sb.append(", fecha=").append(fecha);
+>        sb.append('}');
+>        return sb.toString();
+>     }    
+> }
 
 > [!NOTE]  
-> **Paso 3: Vamos a utilizar un estilo de los modales para ventanas emergentes**  
-> Acceda al [**sitio oficial**](https://getbootstrap.com/docs/5.3/components/modal/) de los modals de Bootstrap para más detalles.  
-> Copiamos el código de la página de Bootstrap y lo pegamos dentro del `<body>` de nuestro archivo `index.jsp`.
-
-> ```html
-> <!-- Button trigger modal -->
-> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
->   Launch demo modal
-> </button>
+> <div align="center"> 
 > 
-> <!-- Modal -->
-> <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
->   <div class="modal-dialog">
->     <div class="modal-content">
->       <div class="modal-header">
->         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
->         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
->       </div>
->       <div class="modal-body">
->         ...
->       </div>
->       <div class="modal-footer">
->         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
->         <button type="button" class="btn btn-primary">Save changes</button>
->       </div>
->     </div>
->   </div>
+> | Componente        | Propósito                                                                 |
+> |-------------------|---------------------------------------------------------------------------|
+> | **id, mensaje, autor, fecha** | Atributos que representan las columnas de la tabla en la BD             |
+> | **Constructores**  | Permiten crear objetos `Mensaje` según diferentes necesidades (insertar, eliminar, actualizar, recuperar) |
+> | **Getters y Setters** | Métodos para acceder y modificar los atributos de forma controlada     |
+> | **toString()**     | Devuelve una representación legible del objeto `Mensaje` (útil para depurar o mostrar datos) |
+> 
 > </div>
+
+## 3. Listar Datos del tipo Objeto
+> [!NOTE]
+> **Vamos a crear una clase para manejar todas las consultas, "MensajeDao" de Data Access Object**  
+> *Con esta clase primero vamos a recuperar los datos y se almacenarán en una lista*
+> 
+> ```java
+> public class MensajeDao {
+>     private Connection conn = null;
+>     private PreparedStatement ps = null;
+>     private ResultSet rs = null;
+>     private Mensaje mensaje;
+>     
+>     public List<Mensaje> seleccionar() throws ClassNotFoundException {
+>         String sql = "SELECT * FROM mensajes";
+>         List<Mensaje> mensajes = new ArrayList<>();        
+>         try {
+>             //Para realizar la consulta a la BD primero debemos de conectarnos
+>             this.conn = getConexion();
+>             this.ps = this.conn.prepareStatement(sql);
+>             this.rs = this.ps.executeQuery();
+>             
+>             //Recorrer todos los registros
+>             while(this.rs.next()) {
+>                 int id = this.rs.getInt("id_mensaje");
+>                 String msm = this.rs.getString("mensaje");
+>                 String atr = this.rs.getString("autor_mensaje");
+>                 String fc = this.rs.getString("fecha_creacion");
+>                 
+>                 this.mensaje = new Mensaje(id, msm, atr, fc);
+>                 mensajes.add(this.mensaje);
+>             }
+>         } catch (SQLException ex) {
+>             ex.printStackTrace(System.out);
+>         } finally {
+>             try {
+>                 cerrar(this.rs);
+>                 cerrar(this.ps);
+>                 cerrar(this.conn);
+>             } catch (SQLException ex) {
+>                 ex.printStackTrace(System.out);
+>             }
+>         }
+>         return mensajes;
+>     }
+> }
+> ```
+
+> <div align="center">  
+> 
+> | Componente              | Propósito                                                                 |
+> |--------------------------|---------------------------------------------------------------------------|
+> | **Connection**           | Establece la conexión con la base de datos                               |
+> | **PreparedStatement**    | Prepara la sentencia SQL de forma segura                                 |
+> | **ResultSet**            | Almacena el resultado de la consulta para iterar sobre él                |
+> | **List<Mensaje>**        | Colección donde se guardan todos los mensajes recuperados                |
+> | **rs.getInt / getString**| Obtienen los valores de cada columna en la fila actual del `ResultSet`   |
+> | **new Mensaje(...)**     | Crea un objeto `Mensaje` con los datos de cada fila                      |
+> | **mensajes.add(...)**    | Agrega cada objeto `Mensaje` a la lista final                            |
+> | **finally + cerrar(...)**| Cierra los recursos usados para evitar fugas de memoria                  |
+> 
+> </div>
+
+> [!NOTE]
+> **Este es el punto de entrada del programa (clase `Main`)**
+> *Aquí se conecta con la base de datos y lista todos los mensajes usando `MensajeDao`*
+>
+> ```java
+> package com.oregoom.mensajes;
+>
+> import java.sql.SQLException;
+> import java.util.List;
+>
+> public class Main {
+>     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+>         //Conexion.getConexion();
+>         //System.out.println("Conexion exitosa");
+>         MensajeDao mensajeDao = new MensajeDao();
+>         List<Mensaje> listaM = mensajeDao.seleccionar();
+>         
+>         for(Mensaje mensaje : listaM){
+>             System.out.println(mensaje);
+>         }
+>     }
+> }
 > ```
 
 > <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen27.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   <p><em>Al actualizar la página vemos un botón (sin funcionalidad)</em></p> <rb></rb>
-> </div> 
-
-> [!NOTE]  
-> **Paso 4: Modal estático (sin JavaScript)**  
-> Este modal aparecerá directamente en la página sin necesidad de interactuar con un botón.  
 > 
-> ```html
+> | Componente            | Propósito                                                  |
+> |------------------------|------------------------------------------------------------|
+> | **MensajeDao**         | Encargado de acceder a los datos desde la base             |
+> | **seleccionar()**      | Recupera los mensajes desde la tabla `mensajes`            |
+> | **List<Mensaje>**      | Estructura para almacenar todos los mensajes recuperados   |
+> | **System.out.println()** | Muestra cada mensaje en consola usando `toString()`         |
+> 
+> </div>
+
+ ![image](https://github.com/user-attachments/assets/1a198047-67dd-4e3f-8b50-d9304ae43f61)
+
+## 4. Insertar Datos del tipo Objeto
+> [!NOTE]
+> **Vamos a trabajar la inserción en la clase MensajeDao**
+>
+> ```java
+> package com.oregoom.mensajes;
+> import java.sql.*;
+> import java.util.*;
+> import static com.oregoom.mensajes.Conexion.*;
+>
+> public class MensajeDao {
+>     private Connection conn = null;
+>     private PreparedStatement ps = null;
+>     private ResultSet rs = null;
+>     private Mensaje mensaje;
+>     
+>     public List<Mensaje> seleccionar() throws ClassNotFoundException {
+>         String sql = "SELECT * FROM mensajes";
+>         List<Mensaje> mensajes = new ArrayList<>();        
+>         try {
+>             this.conn = getConexion();
+>             this.ps = this.conn.prepareStatement(sql);
+>             this.rs = this.ps.executeQuery();
+>             
+>             while(this.rs.next()) {
+>                 int id = this.rs.getInt("id_mensaje");
+>                 String msm = this.rs.getString("mensaje");
+>                 String atr = this.rs.getString("autor_mensaje");
+>                 String fc = this.rs.getString("fecha_creacion");
+>                 
+>                 this.mensaje = new Mensaje(id, msm, atr, fc);
+>                 mensajes.add(this.mensaje);
+>             }
+>         } catch (SQLException ex) {
+>             ex.printStackTrace(System.out);
+>         } finally {
+>             try {
+>                 cerrar(this.rs);
+>                 cerrar(this.ps);
+>                 cerrar(this.conn);
+>             } catch (SQLException ex) {
+>                 ex.printStackTrace(System.out);
+>             }
+>         }
+>         return mensajes;
+>     }
+>     
+>     public int insertar(Mensaje mensaje) throws ClassNotFoundException {
+>         String sql = "INSERT INTO mensajes (mensaje, autor_mensaje, fecha_creacion) " +
+>                      "VALUES (?, ?, CURRENT_TIME())";
+>         int registros = 0;
+>         try {
+>             this.conn = getConexion();
+>             this.ps = this.conn.prepareStatement(sql);       
+>             this.ps.setString(1, mensaje.getMensaje());
+>             this.ps.setString(2, mensaje.getAutor());
+>             registros = this.ps.executeUpdate();
+>             
+>         } catch (SQLException ex) {
+>             ex.printStackTrace(System.out);
+>         } finally {
+>             try {
+>                 cerrar(this.ps);
+>                 cerrar(this.conn);
+>             } catch (SQLException ex) {
+>                 ex.printStackTrace(System.out);
+>             }
+>         }
+>         return registros;
+>     }
+> }
+> ```
+
+> <div align="center">
+>
+> | Componente              | Propósito                                                  |
+> |--------------------------|--------------------------------------------------------------|
+> | **insertar()**           | Método que agrega un nuevo mensaje a la base de datos        |
+> | **setString(1, ...)**    | Asigna el primer valor (`mensaje`) en la consulta SQL        |
+> | **setString(2, ...)**    | Asigna el segundo valor (`autor`) en la consulta SQL         |
+> | **CURRENT_TIME()**       | Función de MySQL que guarda la hora del sistema automáticamente |
+> | **executeUpdate()**      | Ejecuta el INSERT y retorna cuántas filas fueron afectadas   |
+>
+> </div>
+![image](https://github.com/user-attachments/assets/2dbfbc64-d756-4f95-a139-eee0f436672b)
+
+> [!NOTE]
+> **Este es el punto de entrada del programa (clase `Main`)**
+> *Aquí se crea un mensaje desde el método `main`, se inserta en la base de datos con `MensajeDao`, y luego se listan todos los mensajes*
+>
+> ```java
+> package com.oregoom.mensajes;
+>
+> import java.sql.SQLException;
+> import java.util.List;
+>
+> public class Main {
+>
+>     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+>         //Conexion.getConexion();
+>         //System.out.println("Conexion exitosa");
+>         MensajeDao mensajeDao = new MensajeDao();
+>         
+>         Mensaje msm = new Mensaje("Hola desde Main", "MAIN");
+>         int registro = mensajeDao.insertar(msm);
+>         System.out.println("Se insertó: " + registro + " registro");
+>         
+>         List<Mensaje> listaM = mensajeDao.seleccionar();
+>         for(Mensaje mensaje : listaM){
+>             System.out.println(mensaje);
+>         }
+>     }
+> }
+> ```
+
+> <div align="center">
+>
+> | Componente                  | Propósito                                                             |
+> |-----------------------------|-----------------------------------------------------------------------|
+> | **Mensaje(...)**            | Crea un objeto `Mensaje` con datos para insertar                     |
+> | **insertar(msm)**           | Inserta el nuevo mensaje en la base de datos usando `MensajeDao`     |
+> | **System.out.println(...)** | Muestra en consola cuántos registros se insertaron                   |
+>
+> </div>
+
+## 5. Editar Datos del tipo Objeto
+> [!NOTE]
+> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
+> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*
+>
+> ```java
+> public int editar(Mensaje mensaje) throws ClassNotFoundException {
+>     String sql = "UPDATE mensajes SET mensaje = ?, autor_mensaje = ? WHERE id_mensaje = ?";
+>     int registros = 0;
+>     try {
+>         //Para realizar la consulta a la BD primero debemos de conectarnos
+>         this.conn = getConexion();
+>         this.ps = this.conn.prepareStatement(sql);       
+>         this.ps.setString(1, mensaje.getMensaje());
+>         this.ps.setString(2, mensaje.getAutor());
+>         this.ps.setInt(3, mensaje.getId());
+>         registros = this.ps.executeUpdate();
+>     } catch (SQLException ex) {
+>         ex.printStackTrace(System.out);
+>     } finally {
+>         try {
+>             cerrar(this.ps);
+>             cerrar(this.conn);
+>         } catch (SQLException ex) {
+>             ex.printStackTrace(System.out);
+>         }
+>     }
+>     return registros;
+> }
+> ```
+
+> <div align="center">
+>
+> | Componente                  | Propósito                                                                 |
+> |-----------------------------|---------------------------------------------------------------------------|
+> | **setInt()**                | Establece un valor entero como parámetro (en este caso, el `id`)         |
+> | **UPDATE ... WHERE ...**    | Sentencia SQL que modifica solo la fila con el `id_mensaje` indicado     |
+> | **editar(mensaje)**         | Ejecuta la modificación de un mensaje existente en la base de datos      |
+>
+> </div>
+
+> [!NOTE]
+> ```java
+> package com.oregoom.mensajes;
+>
+> import java.sql.SQLException;
+> import java.util.List;
+>
+> public class Main {
+>
+>     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+>         MensajeDao mensajeDao = new MensajeDao();     
+>         Mensaje ms = new Mensaje(1, "Hola desde java Web", "JAVA WEB");
+>         int registro = mensajeDao.editar(ms);
+>         System.out.println("Se edito: "+ registro + " registro");
+>         List<Mensaje> listaM = mensajeDao.seleccionar();
+>         for(Mensaje mensaje: listaM){
+>             System.out.println(mensaje);
+>         }
+>     }
+> }
+> ```
+
+![image](https://github.com/user-attachments/assets/1b7823a4-f768-4932-9e0a-b1307b8b4d84)
+
+## 6. Eliminar Datos del tipo Objeto
+> [!NOTE]
+> **Vamos a realizar la última operación del CRUD (DELETE)+**  
+> ```java
+> public int eliminar(Mensaje mensaje) throws ClassNotFoundException {
+>     String sql = "DELETE FROM mensajes WHERE id_mensaje = ?";
+>     int registros = 0;
+>     try {
+>         this.conn = getConexion();
+>         this.ps = this.conn.prepareStatement(sql);       
+>         this.ps.setInt(1, mensaje.getId());
+>         registros = this.ps.executeUpdate();
+>     } catch (SQLException ex) {
+>         ex.printStackTrace(System.out);
+>     } finally {
+>         try {
+>             cerrar(this.ps);
+>             cerrar(this.conn);
+>         } catch (SQLException ex) {
+>             ex.printStackTrace(System.out);
+>         }
+>     }
+>     return registros;
+> }
+> ```
+
+> [!NOTE]
+> ```java
+> package com.oregoom.mensajes;
+>
+> import java.sql.SQLException;
+> import java.util.List;
+>
+> public class Main {
+>
+>     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+>         MensajeDao mensajeDao = new MensajeDao();
+>         Mensaje ms = new Mensaje(1);
+>         int registro = mensajeDao.eliminar(ms);
+>         System.out.println("Se eliminó: " + registro + " registro");
+>
+>         List<Mensaje> listaM = mensajeDao.seleccionar();
+>         for (Mensaje mensaje : listaM) {
+>             System.out.println(mensaje);
+>         }
+>     }
+> }
+> ```
+![image](https://github.com/user-attachments/assets/cf4784ca-3bb3-42ba-90cb-4a573bc0d486)
+
+
+## 7. Mostrar Mensaje
+> [!NOTE]
+> **Vamos a pasar a trabajar con el index.jsp, es necesario volver a ejecutar el servidor** <br>
+> *Asi, vamos a cargar todos los mensajes de la BD en el modal "Todos los mensajes"* <br>
+![image](https://github.com/user-attachments/assets/5914af2a-5675-4da8-b6b9-90492fe85e4a)
+
+> [!IMPORTANT]
+> Así se importan los paquetes o API´s en el archivo pom.xml <br>
+> ![Estructura final](https://github.com/user-attachments/assets/3f368207-8f98-4305-81c0-ecb88a5e752d)
+
+> [!NOTE]
+> **Código para mostrar y crear mensajes en JSP:**
+>
+> ```jsp
+> <%@page import="com.oregoom.mensajes.Mensaje"%>
+> <%@page import="java.util.*"%>
+> <%@page import="com.oregoom.mensajes.MensajeDao"%>
 > <%@page contentType="text/html" pageEncoding="UTF-8"%>
 > <!DOCTYPE html>
 > <html>
@@ -340,268 +528,83 @@
 >         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 >     </head>
 >     <body>
->         <!-- Modal estático (sin funcionalidad JS) -->
+>         <!-- Modal para crear mensajes -->
 >         <div class="modal" style="display: block; position: initial;">
 >             <div class="modal-dialog">
 >                 <div class="modal-content">
->                     <div class="modal-header">
->                         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
->                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
->                     </div>
->                     <div class="modal-body">
->                         Contenido del modal aquí...
->                     </div>
->                     <div class="modal-footer">
->                         <button type="button" class="btn btn-secondary">Close</button>
->                         <button type="button" class="btn btn-primary">Save changes</button>
->                     </div>
+>                     <form action="index.jsp" method="POST">
+>                         <div class="modal-header">
+>                             <h1 class="modal-title fs-5">Crear mensaje</h1>            
+>                         </div>
+>                         <div class="modal-body">
+>                             <div class="mb-3">
+>                                 <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
+>                                 <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
+>                             </div>
+>                             <div class="mb-3">
+>                                 <label for="autorInput" class="form-label">Autor</label>
+>                                 <input type="text" class="form-control" id="autorInput" name="autor" required>
+>                             </div>
+>                         </div>
+>                         <div class="modal-footer">
+>                             <button type="submit" class="btn btn-primary">Enviar</button>
+>                         </div>
+>                     </form>
 >                 </div>
 >             </div>
+>         </div>
+>         <!-- Modal para mostrar mensajes -->
+>         <div class="modal" style="display: block; position: initial; margin-top: 20px;">
+>             <div class="modal-dialog">
+>                 <div class="modal-content">
+>                     <div class="modal-header">
+>                         <h1 class="modal-title fs-5">Todos los mensajes</h1>            
+>                     </div>
+>                     <!-- Este codigo debemos de iterar para cada mensaje -->
+>                     <%
+>                         MensajeDao mensajeDao = new MensajeDao();
+>                         List<Mensaje> mensajes = mensajeDao.seleccionar();
+>                         //Invertir la lista para mostrar el ultimo mensaje
+>                         Collections.reverse(mensajes);
+>                         for(Mensaje mensaje : mensajes){
+>                     %>
+>                     <div class="modal-body">
+>                         <div class="card">
+>                             <div class="card-body">
+>                                 <h5 class="card-title"><%=mensaje.getAutor()%></h5>
+>                                 <p class="card-text"><%=mensaje.getMensaje()%></p>
+>                                 <p class="blockquote-footer"><cite><%=mensaje.getFecha()%></cite></p>
+>                                 <div class="d-flex gap-2">
+>                                     <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
+>                                     <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
+>                                 </div>
+>                             </div>
+>                         </div>
+>                     </div>
+>                    <%}%>             
+>                 </div>
+>             </div>
+>                                 
 >         </div>
 >     </body>
 > </html>
 > ```
-> 
-> <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen27.avif" alt="Modal estático visible al cargar la página" width="85%">
->    <p><em>El modal aparece automáticamente al cargar la página (sin botón)</em></p>
-> </div>
 
-> [!NOTE]  
-> **Paso 4: Entrys para el mensaje y el autor**  
-> Código para los campos de formulario dentro del modal:
-> 
-> ```html
-> <div class="modal-body">
->     <div class="mb-3">
->         <label for="exampleFormControlInput1" class="form-label">Email address</label>
->         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
->     </div>
->     <div class="mb-3">
->         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
->         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
->     </div>
-> </div>
-> ```
-> 
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen28.avif" alt="Modal estático visible al cargar la página" width="85%">
-> </div>
+![image](https://github.com/user-attachments/assets/7117cfb8-8987-47ae-8032-01bd4ce77707)
 
-> [!NOTE]  
-> **Paso 5: Formulario completo para mensajes**  
-> Código completo del modal con campos personalizados para mensajes:
-> 
-> ```html
-> <%@page contentType="text/html" pageEncoding="UTF-8"%>
-> <!DOCTYPE html>
-> <html>
->     <head>
->         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
->         <title>JSP Page</title>
->         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
->     </head>
->     <body>
->         <!-- Modal estático (sin funcionalidad JS) -->
->         <div class="modal" style="display: block; position: initial;">
->             <div class="modal-dialog">
->                 <div class="modal-content">
->                     <div class="modal-header">
->                         <h1 class="modal-title fs-5">Crear mensaje</h1>            
->                     </div>
->                     <div class="modal-body">
->                         <div class="mb-3">
->                             <label for="exampleFormControlTextarea1" class="form-label">Ingrese el Mensaje</label>
->                             <textarea class="form-control" name="mensaje" rows="3"></textarea>
->                         </div>
->                         <div class="mb-3">
->                             <label for="exampleFormControlInput1" class="form-label">Autor</label>
->                             <input type="text" class="form-control" name="autor">
->                         </div>
->                     </div>
->                     <div class="modal-footer">
->                         <button type="button" class="btn btn-primary" name="enviar">Enviar</button>
->                     </div>
->                 </div>
->             </div>
->         </div>
->     </body>
-> </html>
-> ```
-> 
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen29.avif" alt="Formulario completo para mensajes" width="85%">
-> </div>
 
-## 5. Diseñar en JSP - Mostrar mensaje
-> [!IMPORTANT]
-> **Ahora, ya que tenemos el diseño de crear mensaje, ahora vamos a diseñar el de mostrar mensaje** <br>
-> *Boostrap nos ayudará con el diseño de la interfaz enfoncandonos en lo estilos para que se vea mejor* <br>
-> 
 
-> [!NOTE]  
-> **Paso 1: <p>Accedemos a la sección Card del <a href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank" rel="noopener noreferrer">sitio oficial</a> de Bootstrap.</p>**  
-> **Buscamos la mejor opción para mostrar un mensaje, lo copiamos debajo del último div realizado.**  
->  
-> ```html
-> <div class="card" style="width: 18rem;">
->  <div class="card-body">
->    <h5 class="card-title">Card title</h5>
->    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
->    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
->    <a href="#" class="card-link">Card link</a>
->    <a href="#" class="card-link">Another link</a>
->  </div>
-></div>
-> ```
-
-> [!NOTE]  
-> **Paso 2: Corrección de formato y posición de la tarjeta**  
-> <p>Para solucionar los problemas de formato y posición:</p> <br>
-> 1. Copiamos la estructura del modal "Crear mensaje" <br>
-> 2. Adaptamos el contenido para mostrar mensajes existentes <br> 
-> 3. Agregamos botones de acción para cada mensaje. <br> 
->  
-> ```html
-> <div class="modal" style="display: block; position: initial;">
->     <div class="modal-dialog">
->         <div class="modal-content">
->             <div class="modal-header">
->                 <h1 class="modal-title fs-5">Todos los mensajes</h1>            
->             </div>
->             <div class="modal-body">
->                 <div class="card">
->                     <div class="card-body">
->                         <h5 class="card-title">Juan Suarez</h5>
->                         <p class="card-text">"Hola desde Java"</p>
->                         <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
->                         <a href="#" class="card-link">Editar</a>
->                         <a href="#" class="card-link">Eliminar</a>
->                     </div>
->                 </div>
->             </div>
->         </div>
->     </div>
-> </div>
-> ```
-> <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen29.avif" alt="Vista de mensajes en modal con tarjeta" width="85%">
-> </div>
-
- 
-> ```html
-> <head>
->     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
->     <title>JSP Page</title>
->     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
->     rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
->     crossorigin="anonymous">
-> </head>
-> ```
-> <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen30.avif" alt="Página de descarga Tomcat 9" width="85%" <br>
->   
-> </div> 
-
-## 6. Metodos GET y POST
-> [!IMPORTANT]
-> **Ahora, vamos a agregar las funcionalidad de enviar un mensaje, ya que actualmente nuestro programa no hace nada** <br>
-> *Para eso, vamos a agregar una etiqueta form con una acción y con el metodo get<br>
-> *Asi, en la barra de navegación se mostrará los datos enviados"
-> <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen31.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
-> </div>
-
+## 8. Crear Mensaje
 > [!NOTE]
-> **Luego, para recuperar la información y presentarla en el modal para mostrar mensajes, vamos a utilizar los tags de java** <br>
-> *Así, declaramos unas variables para almacenar el autor y el mensaje y los pasamos en los respectivos campos"
-> ```html
-> <!-- Modal para crear mensajes -->
->        <div class="modal" style="display: block; position: initial;">
->            <div class="modal-dialog">
->                <div class="modal-content">
->                    <form action="index.jsp" method="GET">
->                        <div class="modal-header">
->                            <h1 class="modal-title fs-5">Crear mensaje</h1>            
->                        </div>
->                        <div class="modal-body">
->                            <div class="mb-3">
->                                <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
->                                <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
->                            </div>
->                            <div class="mb-3">
->                                <label for="autorInput" class="form-label">Autor</label>
->                                <input type="text" class="form-control" id="autorInput" name="autor" required>
->                            </div>
->                        </div>
->                        <div class="modal-footer">
->                            <button type="submit" class="btn btn-primary">Enviar</button>
->                        </div>
->                    </form>
->                </div>
->            </div>
->       </div>
-> 
->        <%
->            String mensaje = request.getParameter("mensaje");
->            String autor = request.getParameter("autor");
->        %>
->        <!-- Modal para mostrar mensajes -->
->        <div class="modal" style="display: block; position: initial; margin-top: 20px;">
->            <div class="modal-dialog">
->                <div class="modal-content">
->                    <div class="modal-header">
->                        <h1 class="modal-title fs-5">Todos los mensajes</h1>            
->                    </div>
->                    <div class="modal-body">
->                        <div class="card">
->                            <div class="card-body">
->                                <h5 class="card-title"><%=autor%></h5>
->                                <p class="card-text"><%=mensaje%></p>
->                                <p class="blockquote-footer"><cite>25/10/2020 02:10</cite></p>
->                                <div class="d-flex gap-2">
->                                    <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
->                                    <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
->                                </div>
->                            </div>
->                        </div>
->                    </div>
->                </div>
->            </div>
->        </div>
-> ```
-> <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen32.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
-> </div> 
+> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
+> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*
 
+## 9. Editar Mensaje
 > [!NOTE]
-> **Finalmente, para ocultar la información de la barra de búsqueda podemos utilizar el método POST.** <br>
-> ```html
-> <!-- Modal para crear mensajes -->
->        <div class="modal" style="display: block; position: initial;">
->            <div class="modal-dialog">
->                <div class="modal-content">
->                    <form action="index.jsp" method="POST">
->                        <div class="modal-header">
->                            <h1 class="modal-title fs-5">Crear mensaje</h1>            
->                        </div>
->                        <div class="modal-body">
->                            <div class="mb-3">
->                                <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
->                                <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
->                            </div>
->                            <div class="mb-3">
->                                <label for="autorInput" class="form-label">Autor</label>
->                                <input type="text" class="form-control" id="autorInput" name="autor" required>
->                            </div>
->                        </div>
->                        <div class="modal-footer">
->                            <button type="submit" class="btn btn-primary">Enviar</button>
->                        </div>
->                    </form>
->                </div>
->            </div>
->       </div>
-> > <div align="center">
->    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen33.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
-> </div> 
+> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
+> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*  
+
+## 10. Eliminar Mensaje
+> [!NOTE]
+> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
+> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*
