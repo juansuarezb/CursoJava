@@ -717,9 +717,98 @@ Al hacer clic en el botón **Editar** en la vista de mensajes, el usuario es red
 
    ![Estilo Aplicado](https://github.com/user-attachments/assets/bf557fed-61c6-4237-a957-0c1c4d8ca7b9)
 
+```html
+<div class="d-flex gap-2">
+    <a href="editar.jsp?id=<%=mensaje.getId()%>&mensaje=<%=mensaje.getMensaje()%>&autor=<%=mensaje.getAutor()%>" 
+       class="btn btn-outline-primary btn-sm">
+       Editar
+    </a>
+    <a href="eliminar.jsp?id=<%=mensaje.getId()%>" class="btn btn-outline-danger btn-sm">
+       Eliminar
+    </a>
+</div>
+```
+
+> [!NOTE]
+> **Vamos a recuperar los datos de un mensaje al selecconar la opción de editar un mensaje luego, nos dirigimos al editar.jsp**
+> *En la barra de búsqueda vamos a encontrar los valores del objeto Mensaje que seleccionamos*
+
+![image](https://github.com/user-attachments/assets/2253486a-a59b-434a-a28d-7978878cc7ae)
+
+``` jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Editar mensaje</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Modal para crear mensajes -->
+    <div class="modal" style="display: block; position: initial;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="index.jsp" method="POST">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Editar mensaje</h1>            
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
+                            <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
+                            <textarea class="form-control" name="mensaje" rows="3" required>
+                                <%=request.getParameter("mensaje")%>
+                            </textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="autorInput" class="form-label">Autor</label>
+                            <input type="text" class="form-control" name="autor" required value="<%=request.getParameter("autor")%>">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="index.jsp" class="btn btn-primary">Regresar</a>
+                        <button type="submit" class="btn btn-primary" name="enviar">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+![image](https://github.com/user-attachments/assets/90f3cce3-8ab6-4c94-96dd-3eaa5fb297e3)
 
 
 ## 10. Eliminar Mensaje
 > [!NOTE]
-> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
-> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*
+> **Finalmente, vamos a eliminar un registro desde la vista** <br>
+> *Asi mismo, vamos a crear un nuevo archivo "eliminar.jsp", aquí vamos a realizar la función y luego, regresaremos al index.jsp*
+
+``` jsp
+<%@page import="com.oregoom.mensajes.MensajeDao"%>
+<%@page import="com.oregoom.mensajes.Mensaje"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+            String id = request.getParameter("id");
+            Mensaje mensaje = new Mensaje(Integer.valueOf(id));
+            MensajeDao mensajeDao = new MensajeDao();
+            mensajeDao.eliminar(mensaje);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+
+        %>
+    </body>
+</html>
+
+```
+
+![image](https://github.com/user-attachments/assets/729c85d8-a734-4e60-b0bd-9d6c50d787c0)
