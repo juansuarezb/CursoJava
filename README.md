@@ -1,4 +1,4 @@
- Sección 18: PD - Proyecto de Mensajes
+# Sección 18: PD - Proyecto de Mensajes
 
 > [!NOTE]
 > **Temas cubiertos:**
@@ -593,16 +593,131 @@
 ![image](https://github.com/user-attachments/assets/7117cfb8-8987-47ae-8032-01bd4ce77707)
 
 
-
 ## 8. Crear Mensaje
 > [!NOTE]
-> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
-> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*
+> **Vamos a trabajar la inserción de nuestros registros, que se guarden en la BD y en el modal de "Todos los mensajes" **  
+```jsp
+<%@page import="com.oregoom.mensajes.Mensaje"%>
+<%@page import="java.util.*"%>
+<%@page import="com.oregoom.mensajes.MensajeDao"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Modal para crear mensajes -->
+        <div class="modal" style="display: block; position: initial;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="index.jsp" method="POST">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Crear mensaje</h1>            
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
+                                <textarea class="form-control" name="mensaje" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="autorInput" class="form-label">Autor</label>
+                                <input type="text" class="form-control" id="autorInput" name="autor" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" name="enviar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%
+            MensajeDao mensajeDao = new MensajeDao();
+            //Para recuperar los datos de los campos utilizamos
+            //el request.getParameter
+
+            //Verificamos que no se ingresen valores nulos
+            if (request.getParameter("enviar") != null) {
+                Mensaje mensaje = new Mensaje(
+                        request.getParameter("mensaje"),
+                        request.getParameter("autor")
+                );
+                //Insertamos el objeto
+                mensajeDao.insertar(mensaje);
+            }
+        %>
+        <!-- Modal para mostrar mensajes -->
+        <div class="modal" style="display: block; position: initial; margin-top: 20px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Todos los mensajes</h1>            
+                    </div>
+                    <!-- Este código debe iterar para cada mensaje -->
+                    <% 
+                        List<Mensaje> mensajes = mensajeDao.seleccionar();
+                        //Invertir la lista para mostrar el último mensaje
+                        Collections.reverse(mensajes);
+                        for (Mensaje mensaje : mensajes) {
+                    %>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><%=mensaje.getAutor()%></h5>
+                                <p class="card-text"><%=mensaje.getMensaje()%></p>
+                                <p class="blockquote-footer"><cite><%=mensaje.getFecha()%></cite></p>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
+                                    <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>             
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+![image](https://github.com/user-attachments/assets/cd7741e6-f95a-4816-b04a-bcd8d8ea7b4e)
+
+
 
 ## 9. Editar Mensaje
 > [!NOTE]
-> **Vamos a trabajar la actualización de nuestros registros en la clase `MensajeDao`**  
-> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*  
+> **Vamos a trabajar en la edición de nuestros registros para esto, vamos a crear otro archivo .jsp"**  
+> 
+> *Este método recibe un objeto `Mensaje` con su `id` y nuevos valores de mensaje y autor, y actualiza la fila correspondiente en la base de datos.*
+> - Tenemos que enviar los datos desde el index.jsp al momento de darle click en el botón de editar
+> - Debemos agregar los estilos de BootStrap copiando el 2do código en el head de editar.jsp
+
+``` html
+<a href="editar.jsp" class="btn btn-outline-primary btn-sm">Editar</a>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+```
+## Funcionalidad de Edición de Mensajes
+
+### Interacción con el Botón "Editar"
+Al hacer clic en el botón **Editar** en la vista de mensajes, el usuario es redirigido a un formulario donde puede modificar el mensaje y su autor. El proceso se realiza sin recargar la página completamente, gracias a la integración de JSP y Java. Aquí se describe cómo se comporta la aplicación:
+
+1. **Vista Inicial de los Mensajes**: 
+   Los mensajes se muestran con la opción de editar y eliminar. La vista tiene un diseño atractivo gracias a la integración de **Bootstrap**.
+
+   ![Vista Inicial](https://github.com/user-attachments/assets/3261c852-e5fb-4ab6-a01d-bf4c4690068b)
+
+2. **Cambio de Estilo al Editar**: 
+   Al hacer clic en **Editar**, el diseño se ajusta y el formulario se despliega con el mensaje que el usuario desea modificar. Además, se mantiene el estilo visual de la interfaz, proporcionando una experiencia de usuario más intuitiva y fluida.
+
+   ![Estilo Aplicado](https://github.com/user-attachments/assets/bf557fed-61c6-4237-a957-0c1c4d8ca7b9)
+
+
 
 ## 10. Eliminar Mensaje
 > [!NOTE]

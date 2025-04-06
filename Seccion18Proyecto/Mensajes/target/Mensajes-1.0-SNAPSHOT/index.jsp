@@ -21,7 +21,7 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="mensajeTextarea" class="form-label">Ingrese el Mensaje</label>
-                                <textarea class="form-control" id="mensajeTextarea" name="mensaje" rows="3" required></textarea>
+                                <textarea class="form-control" name="mensaje" rows="3" required></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="autorInput" class="form-label">Autor</label>
@@ -29,12 +29,29 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary" name="enviar">Enviar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <%
+            MensajeDao mensajeDao = new MensajeDao();
+            //Para recuperar los datos de los campos utilizamos
+            //el request.getParameter
+
+            //Verificamos que no se ingresen valores nulos
+            if (request.getParameter("enviar") != null) {
+                Mensaje mensaje = new Mensaje(
+                        request.getParameter("mensaje"),
+                        request.getParameter("autor")
+                );
+                //Insertamos el objeto
+                mensajeDao.insertar(mensaje);
+            }
+
+
+        %>
         <!-- Modal para mostrar mensajes -->
         <div class="modal" style="display: block; position: initial; margin-top: 20px;">
             <div class="modal-dialog">
@@ -43,16 +60,13 @@
                         <h1 class="modal-title fs-5">Todos los mensajes</h1>            
                     </div>
                     <!-- Este codigo debemos de iterar para cada mensaje -->
-                    <%
-                        MensajeDao mensajeDao = new MensajeDao();
+                    <%                        //MensajeDao mensajeDao = new MensajeDao();
                         List<Mensaje> mensajes = mensajeDao.seleccionar();
                         //Invertir la lista para mostrar el ultimo mensaje
                         Collections.reverse(mensajes);
-                        for(Mensaje mensaje : mensajes){
-                            
-                        
-                        
-                    
+                        for (Mensaje mensaje : mensajes) {
+
+
                     %>
                     <div class="modal-body">
                         <div class="card">
@@ -61,16 +75,16 @@
                                 <p class="card-text"><%=mensaje.getMensaje()%></p>
                                 <p class="blockquote-footer"><cite><%=mensaje.getFecha()%></cite></p>
                                 <div class="d-flex gap-2">
-                                    <a href="#" class="btn btn-outline-primary btn-sm">Editar</a>
+                                    <a href="editar.jsp" class="btn btn-outline-primary btn-sm">Editar</a>
                                     <a href="#" class="btn btn-outline-danger btn-sm">Eliminar</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   <%}%>             
+                    <%}%>             
                 </div>
             </div>
-                                
+
         </div>
     </body>
 </html>
