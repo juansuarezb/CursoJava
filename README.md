@@ -1,174 +1,186 @@
-# Sección 15: Introducción a MySQL
+# Sección 14: PD - Persistencia de Datos
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/27b787ef-75bf-4bfa-ba2f-f67ccb4e4386" alt="Curso Java Persistencia" width="600"/>
+</p>
+
 
 > [!NOTE]
-> La instalación y configuración completa del entorno MySQL incluye:
+> <h2>📌 1. Presentación</h2>
+> <p>Vamos a empezar a almacenar los datos de nuestro programa para que no se pierdan al momento de cerrar la aplicación.</p>
+> <em>Primero, vamos a empezar a guardar nuestros datos en archivos y en secciones posteriores en una Base de datos.</em>
+> <h2> Temas: (Imágen generada por IA) </h2>
+> <p align="center">
+>  <img src="https://github.com/user-attachments/assets/9fac5956-b940-4614-9152-f9e13b34e1d4" width="600"/>
+> </p>
+
+
+> [!NOTE]
+> <h2>📌 2. Persistencia de datos</h2>
+> <p>Vamos a almacenar los datos en el disco duro de la pc, diferente de lo que habiamos hecho últimamente (guardar en la memoria RAM) </p>
+> <p>Primero, vamos a ver manejo de archivos luego, vamos a almacenar en una base de datos con ayuda del motor de bases de datos MySQL</p>
+> <p align="center">
+>  <img src="https://github.com/user-attachments/assets/2254dc9d-2024-4510-8112-e9d02d66522c" width="600"/>
+> </p>
+> <h2>API de colecciones en Java </h2>
+> <p>En el paquete de java.util vamos a encontrar a las listas y los maps. </p>
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/4884acec-4e60-4db6-a8f2-95e60a613160" width="600"/>
+> </p>
+> <p>Se puede observar que Set y List heredan de Collection. Estas 2 son interfaces que coleccionan datos y funcionan como un array.</p>
+
+
+
+> [!NOTE]
+> ## 📌 3. Lista
+> Primero, vamos a crear un nuevo proyecto en NetBeans llamado **"PersistenciaDatos"** y agregamos una clase `main`.
 > 
-> **🗄️ Servidor MySQL**  
-> - Instalación del motor de base de datos.  
-> - Configuración de usuarios/contraseñas  
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/0b7c35b4-573e-4dad-a2ce-68809376030a" width="600"/>
+> </p>
+> 
+> ## Importamos el API de colecciones en nuestra clase main:
+>
+> ```java
+> import java.util.*;
+> ```
+> *Creamos una lista del tipo ArrayList dentro del método main. (Estas colecciones son interfaces y no clases normales)* 
+> ```java
+> List lista1 = new ArrayList(); //Definimos un arrayList
+> ```
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/46f54a06-7d28-48dc-ba1d-a08134b650ee" width="600"/>
+> </p>
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/ebbbcd35-f43b-4d05-b2b5-79ee89bc9616" width="600"/>
+> </p>
+
+**También, podemos imprimir la lista con un `for-each` de la siguiente manera:**  
+```java
+for (Object dato : lista1) {
+    System.out.println(dato);
+}
+```
+**Expresada como función Lambda:**
+```java
+lista1.forEach(dato -> {
+            System.out.println(dato);
+        });
+```
+
+> [!NOTE]
+> **Podemos recuperar los elementos de la lista de manera individual a través de sus índices**
+> ```java	
+> System.out.println(lista1.get(0)); //Primer elemento -> 1
+> System.out.println(lista1.get(1)); //2do elemento -> Juan Suarez
+> ```
+
+> [!NOTE]
+> **Podemos Eliminar los elementos de la lista de manera individual a través de sus índices (remove)**
+> ```java	
+> lista1.remove(1)); //Elimina 2do elemento -> Juan Suarez
+>   System.out.println(lista1);
+> ```
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/e80614fe-d8d5-4f29-95f3-e78f5a858abd" width="600"/>
+> </p>
+
+> [!NOTE]
+> **Podemos Editar los elementos de la lista de manera individual a través de sus índices (set)**
+> ```java	
+>   lista1.set(0, "Pedro");  //Pasamos como argumentos el índice y el dato.
+> ```
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/9ea40c01-3a16-4c2e-95ce-733dcef0288b" width="600"/>
+> </p>
+
+
+> [!NOTE]
+> ## 📌 4. Set
+> `Set` es una colección que **no permite elementos duplicados**. Su comportamiento respecto al orden depende de la implementación:  
+> **`HashSet`**: No garantiza orden alguno (basado en `hashCode`).  
+> **`LinkedHashSet`**: Mantiene el orden de inserción.  
+> **`TreeSet`**: Ordena los elementos (natural o con un `Comparator`).
+> Ejemplo:  
+> ```java
+> import java.util.*
+> public class Main(){
+> public static void main(String[] args){
+> Set<String> set = new HashSet<>();
+> set.add("Hola");
+> set.add("Hola");  // ¡Ignorado!  
+> System.out.println(set);  // Salida: [Hola] (sin duplicados)
+> ```
+> ### **¿Por qué es importante esta distinción?**  
+> Si necesitas **evitar duplicados pero mantener el orden**, usa `LinkedHashSet`.  
+> Si necesitas **orden natural o personalizado**, elige `TreeSet`.
+>  ```java
+>  HashSet dias = new HashSet();
+>  dias.add("lunes");
+>  dias.add("martes");
+>  dias.add("miercoles");
+>  dias.add("jueves");
+>  dias.add("viernes");
+>
+>  for(Object dia: dias){
+>  	System.out.println(dias);
+>  }
+>  dias.remove("lunes");
+>  System.out.println(dias);
+>  dias.clear();
+>  System.out.println(dias);
+>
+>  }
+>  }
+>  ```
 >  
-> **🖥️ MySQL Workbench**  
-> - Herramienta gráfica para administración  
->  
-> **⌨️ Integración CLI**  
-> - Acceso a comandos MySQL desde terminal nativo  
-> - Variables de entorno configuradas globalmente  
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/ba980a5f-2320-4e2d-b2f5-2711db85f7c4" width="600"/>
+> </p>
 
-## 1. Instalación de MySQL
 
-> [!IMPORTANT]
-> <p>Acceda al <a href="https://dev.mysql.com/downloads/installer/" target="_blank" rel="noopener noreferrer">sitio oficial</a> para descargar el instalador de MySQL.</p>
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen1.avif)
 > [!NOTE]
-> *Paso 1: Selección de versión*  
-> En el instalador, elegir la versión completa con todos los componentes (opción más pesada pero completa).
+> ## 📌 5. Map
+> Un Map (mapa) almacena pares **clave-valor**, donde: <br>
+> ✅ Claves únicas: No puede haber duplicados (si repites una clave, se sobrescribe el valor). <br>
+> ✅ Valores pueden repetirse. <br> 
+> ✅ Implementaciones comunes: HashMap, LinkedHashMap, TreeMap. <br>
+> Map es independiente de Collections y se puede crear de la siguiente manera: <br>
+> ```java
+> Map numeros = new HashMap();
+>        numeros.put(1, "uno");
+>        numeros.put(2, "dos");
+>        numeros.put(3, "tres");
+>        numeros.put(4, "cinco");        
+> ```
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/d3171f03-762b-4776-a404-a572e3a68e44" width="600"/>
+> </p>
+>
+> ```java
+> System.out.println(numeros.get(1)); // -> 1 (Podemos considerar a la clave como el índice del objeto)
+> for(Object valores: numeros.keySet()){ //keySet obtengo las claves
+>            System.out.println(valores);
+>        }
+>    for(Object clave: numeros.keySet()){
+>            System.out.println(clave+" "+ numeros.get(clave)); //Obtengo clave y valor
+>        }
+> ```
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/8fbfe6a1-e894-49c8-aded-ba0cd3a50d6c" width="600"/>
+> </p>
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen2.avif)
+
 > [!NOTE]
-> *Paso 2: Descarga*  
-> Seleccionar "No thanks, just start my download" para iniciar la descarga sin crear cuenta.
+> ## 📌 6. Crear Archivo
+> Primero, vamos a crear un nuevo proyecto en NetBeans llamado **"PersistenciaDatos"** y agregamos una clase `main`.
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen3.avif)
 > [!NOTE]
-> *Paso 3: Ejecución*  
-> Ejecutar el instalador descargado para comenzar el proceso.
+> ## 📌 7. Escribir Archivo
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen4.avif)
 > [!NOTE]
-> *Paso 4: Tipo de instalación*  
-> Seleccionar "Custom Type" para controlar qué componentes instalar (solo servidor y Workbench).
+> ## 📌 8. Leer Archivo
 
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen5.avif)
 > [!NOTE]
-> *Paso 5: Selección de componentes*  
-> Usar las flechas para agregar:  
-> - MySQL Server (motor principal)  
-> - MySQL Workbench (interfaz gráfica)
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen6.avif)
-> [!NOTE]
-> *Paso 6: Confirmación*  
-> Seleccionar "Execute" para iniciar la descarga e instalación de los paquetes seleccionados.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen7.avif)
-> [!WARNING]
-> *Paso 7: Configuración clave*  
-> **¡Atención!** Guardar esta contraseña generada para el usuario root, es fundamental para acceder al sistema.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen8.avif)
-> [!NOTE]
-> *Paso 8: Finalización*  
-> Seleccionar "Execute" nuevamente para completar la instalación. El proceso puede tomar varios minutos.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen9.avif)
-> [!NOTE]
-> *Paso 9: Conexión a MySQL*  
-> Seleccionamos la opción "Connect a Database" para conectarnos a nuestro servidor MySQL.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen10.avif)
-> [!NOTE]
-> *Paso 10: Store in Vault*  
-> Seleccionamos la opción Store in Vault luego, ingresamos la contraseña del usuario root.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen11.avif)
-> [!NOTE]
-> *Paso 11: Finalización*  
-> Listo!, hemos instalado el servidor MySQL y Workbench y estamos listos para empezar a trabajar.
-
-
-## 2. Crear Base de datos
-
-> [!TIP]
-> Vamos a mostrar los comandos más basicos y el manejo de las funciones de Workbench. <br>
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen12.avif) <br>
-> [!NOTE] 
-> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB. <br>
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen13.avif) <br>
-> [!NOTE]
-> Podemos eliminar la DB recien creada mediante la opción "DROP SCHEMA". <br> 
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen14.avif) <br>
-> [!NOTE]
-> Podemos crear una DB directamente con el Query. <br>
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen15.avif) <br>
-> [!NOTE]
-> Podemos listar las DB directamente con el Query. <br>
-
-```sql
--- Crear una base de datos
-CREATE DATABASE mensajes_db;
-
---Eliminar una base de datos
-DROP DATABASE mensajes_db;
-
---Mostrar las bases de datos
-SHOW DATABASES;
-
-```
-## 3. Crear Tabla
-> [!NOTE]
-> Una tabla es el lugar dónde vamos a almacenar los datos/registros.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen16.avif) <br>
-> [!NOTE] 
-> Seleccionamos la opción "Create a new schema" e ingresamos el nombre de la DB, luego ingresamos los datos que va a tener la tabla. <br>
-
-> Un consejo útil o una sugerencia.
-
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen17.avif) <br>
-
-```sql
-CREATE TABLE mensajes_db.mensajes(
-	id_mensaje INT NOT NULL AUTO_INCREMENT,
-    /*
-  seleccionamos la db (mensajes_db) y ponemos el nombre de la taba (mensajes)*/
-    mensaje VARCHAR(280) NOT NULL,
-	autor_mensaje VARCHAR(45) NOT NULL,
-    fecha_creacion datetime NOT NULL,
-    PRIMARY KEY (id_mensaje)
-);;
-
-```
-## 4. Insertar registro
-> [!NOTE]
-> Una vez creada la tabla podemos seleccionar los registros que tenga esta.
-> Seleccionamos todos los registros de la tabla mensajes, actualmente está vacío. <br>
->![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen18.avif) <br>
-
-**Insertamos a la tabla mensajes con este comando:** <br>
-
-```sql
-INSERT INTO mensajes_db.mensajes (mensaje, autor_mensaje,fecha_creacion)
-VALUES ("Hola Mundo", "Juan Suárez",current_time());
-```
-![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen19.avif) <br>
-> [!NOTE] 
-> Volvemos a listar los registros de la tabla para verificar la inserción. <br>
-
-## 5. Editar y Eliminar Registro
-> [!NOTE]
-> Vamos a editar o actualizar y también eliminar un registro.
-> Para editar un registro necesitamos el id y los campos a ser editados<br>
-
-```sql
-UPDATE mensajes_db.mensajes 
-SET mensaje= "Mensaje cambiado", 
-autor_mensaje="Rolando Soto"
-WHERE id_mensaje = 2;
-```
-> [!NOTE] 
-> Volvemos a listar los registros de la tabla para verificar el cambio. <br>
-> ![Interfaz de instalación de MySQL](https://github.com/juansuarezb/CursoJava/raw/Seccion15/Imagenes/Imagen20.avif) <br>
-
-
-> [!NOTE] 
-> Finalmente, vamos a eliminar un registro mediante el comando: <br>
-
-```sql
-DELETE  FROM mensajes_db.mensajes 
-WHERE id_mensaje = 2;
-```
+> ## 📌 9. Eliminar Archivo
