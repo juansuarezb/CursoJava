@@ -148,10 +148,11 @@
 > </details>
 
 
+
 > [!NOTE]
 > **CERTIFICADO DEL CURSO**  
 > <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Main/Imagenes/Imagen1.avif" alt="Certificado del curso" width="85%">   
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/main/Imagenes/Imagen1.avif" alt="Certificado del curso" width="85%">   
 > </div>
 
 
