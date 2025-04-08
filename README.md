@@ -58,95 +58,111 @@
 > - Conexión a bases de datos con JDBC  
 > - Realizar operaciones CRUD (Create, Read, Update, Delete)  
 
-
 > [!NOTE]
-> # CONTENIDO
->
+> # CONTENIDO DEL CURSO
+
 > <details> 
->   <summary>Seccion 1 - Introducción al Curso </summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">sección</a> únicamente se hace una introducción al curso</p>
-> </details>
->
-> <details>
->   <summary>Sección 9 - POO: Encapsulamiento </summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se abordarán los siguientes temas: </p>
+>   <summary>📌 Sección 1 - Introducción al Curso</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">sección</a> se realiza la presentación general del curso:</p>
 >   <ul>
->     <li><strong>¿Qué es encapsulamiento?</strong></li>
->     <li><strong>Getters y Setters</strong></li>
->     <li><strong>Sobreescribir métodos - toString</strong></li>
->   </ul>
-> </details>
-> 
-> <details>
->   <summary>Sección 14 - PD: Persistencia de Datos</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">sección</a> se abordarán los siguientes temas: </p>
->   <ul>
->     <li><strong>Presentación de la sección </strong></li>
->     <li><strong>Persistencia de datos</strong></li>
->     <li><strong>Lista</strong></li>
->     <li><strong>Set</strong></li>
->     <li><strong>Crear Archivo</strong></li>
->     <li><strong>Escribir Archivo</strong></li>
->     <li><strong>Leer Archivo</strong></li>
->     <li><strong>Eliminar Archivo</strong></li>
->   </ul>
-> </details>
-> 
-> <details>
->   <summary>Sección 15 - PD: Introducción a MYSQL </summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se abordarán los siguientes temas: </p>
->   <ul>
->     <li><strong>Instalar MySQL </strong></li>
->     <li><strong>Crear Base de datos </strong></li>
->     <li><strong>Crear Tabla </strong></li>
->     <li><strong>Insertar registro</strong></li>
->     <li><strong>Editar y eliminar registro</strong></li>
->   </ul>
-> </details>
-> 
-> <details>
->   <summary>Sección 16 - PD: Conexión a MySQL</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion16">sección</a> se abordarán los siguientes temas: </p>
->   <ul>
->     <li><strong>Descargar dependencias de MySQL </strong></li>
->     <li><strong>De Java a MySQL </strong></li>
->     <li><strong>SELECT - desde Java </strong></li>
->     <li><strong>INSERT INTO - desde Java</strong></li>
->     <li><strong>UPDATE - desde Java </strong></li>
->     <li><strong>DELETE - desde Java </strong></li>
->   </ul>
-> </details>
-> 
-> <details>
->   <summary>Sección 17 - Introducción a JAVA web</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se abordarán los siguientes temas: </p>
->   <ul>
->     <li><strong>Instalar Apache Tomcat 9 </strong></li>
->     <li><strong>Hola Mundo Web </strong></li>
->     <li><strong>¿Qúe es JSP? </strong></li>
->     <li><strong>Diseñar en JSP - Crear mensaje</strong></li>
->     <li><strong>Diseñar en JSP - Mostrar mensaje</strong></li>
->     <li><strong>Eliminar datos del tipo objeto</strong></li>
->     <li><strong>Metodos GET Y POST</strong></li>
->   </ul>
-> </details>
-> 
-> <details>
->   <summary>Sección 18 - Proyecto de Mensajes</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion18">última sección</a> se abordarán los siguientes temas: </p>
->   <ul>
->     <li><strong>Conexión a MySQL</strong></li>
->     <li><strong>Clase Mensaje</strong></li>
->     <li><strong>Listar datos del tipo objeto</strong></li>
->     <li><strong>Insertar datos del tipo objeto</strong></li>
->     <li><strong>Editar datos del tipo objeto</strong></li>
->     <li><strong>Eliminar datos del tipo objeto</strong></li>
->     <li><strong>Mostrar Mensaje</strong></li>
->     <li><strong>Editar Mensaje</strong></li>
->     <li><strong>Eliminar Mensaje</strong></li>
+>     <li>Objetivos de aprendizaje</li>
+>     <li>Requisitos previos</li>
+>     <li>Metodología de trabajo</li>
 >   </ul>
 > </details>
 
+> <details> 
+>   <summary>🔧 Sección 2 - Fundamentos de Java</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion2">sección</a> se cubren los conceptos básicos:</p>
+>   <ul>
+>     <li><strong>¿Qué es Java y cómo funciona?</strong></li>
+>     <li><strong>Instalar JDK</strong></li>
+>     <li><strong>Instalar Apache NetBeans</strong>)</li>
+>     <li><strong>Crear tu primer programa</strong></li>
+>     <li><strong>Compilación y ejecución</strong></li>
+>     <li><strong>Sintaxis y semántica</strong></li>
+>     <li><strong>JShell de Java</strong></li>
+>     <li><strong>Resumen y ejercicios</strong></li>
+>   </ul>
+> </details>
+
+> <details>
+>   <summary>🧩 Sección 9 - POO: Encapsulamiento</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se trabaja con:</p>
+>   <ul>
+>     <li><strong>Conceptos de encapsulamiento</strong></li>
+>     <li><strong>Implementación de Getters y Setters</strong></li>
+>     <li><strong>Sobreescritura de métodos (toString)</strong></li>
+>     <li><strong>Modificadores de acceso</strong></li>
+>   </ul>
+> </details>
+
+> <details>
+>   <summary>💾 Sección 14 - PD: Persistencia de Datos</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">sección</a> se aprende:</p>
+>   <ul>
+>     <li><strong>Fundamentos de persistencia</strong></li>
+>     <li><strong>Manejo de Listas y Sets</strong></li>
+>     <li><strong>Operaciones con archivos:</strong>
+>       <ul>
+>         <li>Creación</li>
+>         <li>Escritura</li>
+>         <li>Lectura</li>
+>         <li>Eliminación</li>
+>       </ul>
+>     </li>
+>   </ul>
+> </details>
+
+> <details>
+>   <summary>🗃️ Sección 15 - PD: Introducción a MySQL</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <ul>
+>     <li><strong>Instalación y configuración de MySQL</strong></li>
+>     <li><strong>Creación de bases de datos</strong></li>
+>     <li><strong>Diseño de tablas</strong></li>
+>     <li><strong>Operaciones CRUD básicas</strong></li>
+>   </ul>
+> </details>
+
+> <details>
+>   <summary>🔌 Sección 16 - PD: Conexión a MySQL</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion16">sección</a> se implementa:</p>
+>   <ul>
+>     <li><strong>Conexión Java-MySQL</strong></li>
+>     <li><strong>Ejecución de consultas SQL desde Java</strong></li>
+>     <li><strong>Operaciones completas:</strong>
+>       <ul>
+>         <li>SELECT</li>
+>         <li>INSERT</li>
+>         <li>UPDATE</li>
+>         <li>DELETE</li>
+>       </ul>
+>     </li>
+>   </ul>
+> </details>
+
+> <details>
+>   <summary>🌐 Sección 17 - Introducción a Java Web</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se trabaja con:</p>
+>   <ul>
+>     <li><strong>Configuración de Tomcat</strong></li>
+>     <li><strong>Desarrollo con JSP</strong></li>
+>     <li><strong>Métodos HTTP (GET/POST)</strong></li>
+>     <li><strong>Creación de componentes web</strong></li>
+>   </ul>
+> </details>
+
+> <details>
+>   <summary>🚀 Sección 18 - Proyecto Final: Sistema de Mensajes</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion18">sección final</a> se integran todos los conocimientos:</p>
+>   <ul>
+>     <li><strong>Arquitectura completa</strong></li>
+>     <li><strong>Conexión a base de datos</strong></li>
+>     <li><strong>Operaciones CRUD completas</strong></li>
+>     <li><strong>Interfaz web funcional</strong></li>
+>   </ul>
+> </details>
 
 
 > [!NOTE]
