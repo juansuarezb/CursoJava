@@ -1,9 +1,12 @@
-# Curso de Java - de principiante a avanzado
+# Bienvenido al curso de Java de principiante a avanzado. Este repositorio está organizado en ramas para facilitar el acceso a cada sección del curso. <br> <br>
+![Java](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=openjdk&logoColor=white&color=6aa6f8)  ![GitHub juansuarezb](https://img.shields.io/github/followers/juansuarezb?label=Follow&style=social) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=juansuarezb.CursoJava)![Java Lover](https://img.shields.io/badge/Code-Java_Lover-informational?style=flat&logo=java&logoColor=white&color=6aa6f8)
+![JSP](https://img.shields.io/badge/Web-JSP-informational?style=flat&logo=java&logoColor=white&color=6aa6f8)
+![Bootstrap](https://img.shields.io/badge/Style-Bootstrap-informational?style=flat&logo=bootstrap&logoColor=white&color=6aa6f8)
+![Hola Mundo](https://img.shields.io/badge/Greeting-Hola_Mundo-informational?style=flat&logo=octocat&logoColor=white&color=6aa6f8)
 
-Bienvenido al curso de Java de principiante a avanzado. Este repositorio está organizado en ramas para facilitar el acceso a cada sección del curso. <br> <br>
-**EL CONTENIDO DE ESTE CURSO PERTENCE EN SU MAYORIA A: Alex Roel ChB, abel Ch. CREEADOR ORIGINAL DEL CURSO EN UDEMY**
+> [!IMPORTANT]
+> **EL CONTENIDO DE ESTE CURSO PERTENECE EN SU MAYORÍA A: Alex Roel ChB, Abel Ch. CREADOR ORIGINAL DEL CURSO EN UDEMY. [LINK DEL CURSO AQUÍ](https://www.udemy.com/course/curso-completo-de-java/?couponCode=KEEPLEARNING)**
 
-![Java](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=openjdk&logoColor=white&color=6aa6f8)  ![GitHub juansuarezb](https://img.shields.io/github/followers/juansuarezb?label=Follow&style=social) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=juansuarezb.CursoJava)
 
 ## 
 > [!TIP] 
