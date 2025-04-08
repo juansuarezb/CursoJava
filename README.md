@@ -1,186 +1,119 @@
-# Sección 14: PD - Persistencia de Datos
+# Sección 9: POO - ENCAPSULAMIENTO
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/27b787ef-75bf-4bfa-ba2f-f67ccb4e4386" alt="Curso Java Persistencia" width="600"/>
+  <img src="https://github.com/user-attachments/assets/a996c5c5-c61f-42d3-83fa-b822f331ceab" alt="Curso Java Persistencia" width="600"/>
 </p>
 
+> [!NOTE]
+> **Temas cubiertos:**
+> - ¿Qué es encapsulamiento?
+> - Getters y Setters  
+> - Sobre escribir métodos - toString
 
 > [!NOTE]
-> <h2>📌 1. Presentación</h2>
-> <p>Vamos a empezar a almacenar los datos de nuestro programa para que no se pierdan al momento de cerrar la aplicación.</p>
-> <em>Primero, vamos a empezar a guardar nuestros datos en archivos y en secciones posteriores en una Base de datos.</em>
-> <h2> Temas: (Imágen generada por IA) </h2>
-> <p align="center">
->  <img src="https://github.com/user-attachments/assets/9fac5956-b940-4614-9152-f9e13b34e1d4" width="600"/>
-> </p>
-
-
-> [!NOTE]
-> <h2>📌 2. Persistencia de datos</h2>
-> <p>Vamos a almacenar los datos en el disco duro de la pc, diferente de lo que habiamos hecho últimamente (guardar en la memoria RAM) </p>
-> <p>Primero, vamos a ver manejo de archivos luego, vamos a almacenar en una base de datos con ayuda del motor de bases de datos MySQL</p>
-> <p align="center">
->  <img src="https://github.com/user-attachments/assets/2254dc9d-2024-4510-8112-e9d02d66522c" width="600"/>
-> </p>
-> <h2>API de colecciones en Java </h2>
-> <p>En el paquete de java.util vamos a encontrar a las listas y los maps. </p>
-> <p align="center">
->   <img src="https://github.com/user-attachments/assets/4884acec-4e60-4db6-a8f2-95e60a613160" width="600"/>
-> </p>
-> <p>Se puede observar que Set y List heredan de Collection. Estas 2 son interfaces que coleccionan datos y funcionan como un array.</p>
-
-
-
-> [!NOTE]
-> ## 📌 3. Lista
-> Primero, vamos a crear un nuevo proyecto en NetBeans llamado **"PersistenciaDatos"** y agregamos una clase `main`.
+> # 1. ¿Qué es encapsulamiento?
+> <h4 align="center">El modificador de acceso que vamos a utilizar es el private (-)</h4>
 > 
 > <p align="center">
->   <img src="https://github.com/user-attachments/assets/0b7c35b4-573e-4dad-a2ce-68809376030a" width="600"/>
+>   <img src="https://github.com/user-attachments/assets/0f233c88-95eb-4500-b160-b6637604364f" width="600"/>
 > </p>
 > 
-> ## Importamos el API de colecciones en nuestra clase main:
+> La única manera de acceder a estos datos y modificarlos es a través de los métodos. Así, protegemos los datos internos de la clase.
 >
-> ```java
-> import java.util.*;
-> ```
-> *Creamos una lista del tipo ArrayList dentro del método main. (Estas colecciones son interfaces y no clases normales)* 
-> ```java
-> List lista1 = new ArrayList(); //Definimos un arrayList
-> ```
-> <p align="center">
->   <img src="https://github.com/user-attachments/assets/46f54a06-7d28-48dc-ba1d-a08134b650ee" width="600"/>
-> </p>
-> <p align="center">
->   <img src="https://github.com/user-attachments/assets/ebbbcd35-f43b-4d05-b2b5-79ee89bc9616" width="600"/>
-> </p>
 
-**También, podemos imprimir la lista con un `for-each` de la siguiente manera:**  
+> [!NOTE]
+> # 2. Getters y Setters.
+> Creamos un nuevo paquete y una nueva clase `Persona` para practicar el encapsulamiento. <br>
+> *En la clase Persona agregamos 3 atributos y sus respectivos getters y setters. Netbeans tiene la opción de ingresar*
+> *automáticamente los getters y setters que necesitemos*
+
+
 ```java
-for (Object dato : lista1) {
-    System.out.println(dato);
-}
+package Encapsulamiento;
+
+public class Persona {
+    private String nombre;
+    private int edad;
+    private boolean eliminado; //Estado de la persona
+
+    
+    //Generamos un constructor
+    public Persona(String nombre, int edad, boolean eliminado) {
+        this.nombre = nombre; //Utilizamos this para referirnos al atributo de la clase
+        this.edad = edad;
+        this.eliminado = eliminado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public boolean isEliminado(){
+        return this.eliminado;
+    }
+    
+    public void setEliminado(Boolean estado){
+        this.eliminado = estado;
+    }
 ```
-**Expresada como función Lambda:**
-```java
-lista1.forEach(dato -> {
-            System.out.println(dato);
-        });
-```
-
 > [!NOTE]
-> **Podemos recuperar los elementos de la lista de manera individual a través de sus índices**
-> ```java	
-> System.out.println(lista1.get(0)); //Primer elemento -> 1
-> System.out.println(lista1.get(1)); //2do elemento -> Juan Suarez
-> ```
-
-> [!NOTE]
-> **Podemos Eliminar los elementos de la lista de manera individual a través de sus índices (remove)**
-> ```java	
-> lista1.remove(1)); //Elimina 2do elemento -> Juan Suarez
->   System.out.println(lista1);
-> ```
 > <p align="center">
->   <img src="https://github.com/user-attachments/assets/e80614fe-d8d5-4f29-95f3-e78f5a858abd" width="600"/>
-> </p>
-
-> [!NOTE]
-> **Podemos Editar los elementos de la lista de manera individual a través de sus índices (set)**
-> ```java	
->   lista1.set(0, "Pedro");  //Pasamos como argumentos el índice y el dato.
-> ```
-> <p align="center">
->   <img src="https://github.com/user-attachments/assets/9ea40c01-3a16-4c2e-95ce-733dcef0288b" width="600"/>
-> </p>
-
-
-> [!NOTE]
-> ## 📌 4. Set
-> `Set` es una colección que **no permite elementos duplicados**. Su comportamiento respecto al orden depende de la implementación:  
-> **`HashSet`**: No garantiza orden alguno (basado en `hashCode`).  
-> **`LinkedHashSet`**: Mantiene el orden de inserción.  
-> **`TreeSet`**: Ordena los elementos (natural o con un `Comparator`).
-> Ejemplo:  
-> ```java
-> import java.util.*
-> public class Main(){
-> public static void main(String[] args){
-> Set<String> set = new HashSet<>();
-> set.add("Hola");
-> set.add("Hola");  // ¡Ignorado!  
-> System.out.println(set);  // Salida: [Hola] (sin duplicados)
-> ```
-> ### **¿Por qué es importante esta distinción?**  
-> Si necesitas **evitar duplicados pero mantener el orden**, usa `LinkedHashSet`.  
-> Si necesitas **orden natural o personalizado**, elige `TreeSet`.
->  ```java
->  HashSet dias = new HashSet();
->  dias.add("lunes");
->  dias.add("martes");
->  dias.add("miercoles");
->  dias.add("jueves");
->  dias.add("viernes");
->
->  for(Object dia: dias){
->  	System.out.println(dias);
->  }
->  dias.remove("lunes");
->  System.out.println(dias);
->  dias.clear();
->  System.out.println(dias);
->
->  }
->  }
->  ```
->  
-> <p align="center">
->   <img src="https://github.com/user-attachments/assets/ba980a5f-2320-4e2d-b2f5-2711db85f7c4" width="600"/>
-> </p>
-
-
-
-> [!NOTE]
-> ## 📌 5. Map
-> Un Map (mapa) almacena pares **clave-valor**, donde: <br>
-> ✅ Claves únicas: No puede haber duplicados (si repites una clave, se sobrescribe el valor). <br>
-> ✅ Valores pueden repetirse. <br> 
-> ✅ Implementaciones comunes: HashMap, LinkedHashMap, TreeMap. <br>
-> Map es independiente de Collections y se puede crear de la siguiente manera: <br>
-> ```java
-> Map numeros = new HashMap();
->        numeros.put(1, "uno");
->        numeros.put(2, "dos");
->        numeros.put(3, "tres");
->        numeros.put(4, "cinco");        
-> ```
-> <p align="center">
->   <img src="https://github.com/user-attachments/assets/d3171f03-762b-4776-a404-a572e3a68e44" width="600"/>
+>   <img src="https://github.com/user-attachments/assets/2e29d578-02c4-44c2-b518-5a75972121ec" width="600"/>
 > </p>
 >
-> ```java
-> System.out.println(numeros.get(1)); // -> 1 (Podemos considerar a la clave como el índice del objeto)
-> for(Object valores: numeros.keySet()){ //keySet obtengo las claves
->            System.out.println(valores);
->        }
->    for(Object clave: numeros.keySet()){
->            System.out.println(clave+" "+ numeros.get(clave)); //Obtengo clave y valor
->        }
-> ```
 > <p align="center">
->   <img src="https://github.com/user-attachments/assets/8fbfe6a1-e894-49c8-aded-ba0cd3a50d6c" width="600"/>
+>   <img src="https://github.com/user-attachments/assets/fb19c4f2-822c-44d2-b867-608603d407a8" width="600"/>
+> </p>
+> <p>Para el atributo de eliminado vamos a escribir manualmente los métodos para obtener y settear el atributo.</p>
+> <p align="center">
+>   <img src="https://github.com/user-attachments/assets/f7df33ff-7e30-41db-871f-51f76935b571" width="600"/>
 > </p>
 
+> [!NOTE]
+> Creamos un nuevo paquete llamado "test" para **ya no realizar las pruebas directamente en el main** y una nueva clase `TestPersona` para probar la clase Persona <br>
+> *En la clase Persona agregamos 3 atributos y sus respectivos getters y setters. Netbeans tiene la opción de ingresar*
+> *automáticamente los getters y setters que necesitemos* <br>
+> ```java
+> package test;
+> import Encapsualimento.*;   //Importamos todo lo que este en el paquete Encapsulamiento
+> public Class TestPersona(){
+>   public static void main(String[] args){
+>       //Construimos el primer objeto de la clase Persona
+>       Persona persona1 = new Persona("Juan", 22, false);
+>       System.out.println("Nombre :" + persona1.getNombre());
+>
+>       //Para editar un atributo
+>       persona.setEdad(23);
+>       System.out.println("Nueva edad :" + persona1.getEdad());
+> }
+> }
+> ```
+> ![image](https://github.com/user-attachments/assets/cc7e179e-928a-41f5-9625-73466ce6802a)
 
 > [!NOTE]
-> ## 📌 6. Crear Archivo
-> Primero, vamos a crear un nuevo proyecto en NetBeans llamado **"PersistenciaDatos"** y agregamos una clase `main`.
-
-> [!NOTE]
-> ## 📌 7. Escribir Archivo
-
-> [!NOTE]
-> ## 📌 8. Leer Archivo
-
-> [!NOTE]
-> ## 📌 9. Eliminar Archivo
+> # 3. Sobre Escribir Métodos - toString
+> Ahora, vamos a sobre escribir un método, todos estos métodos ya vienen implementados en la clase Object.
+> *Debemos implementar nuestro propio método toString() para imprimir los datos de la clase Persona.
+> 
+> ```java
+> //Anotador que me permite modificar un método que ya esta implementado
+>    @Override
+>     //Modificamos el metodo toString para formatear los valores del bojeto. .formatted
+>    public String toString() {
+>        return "Persona: [Nombre: %s, Edad: %d, Eliminado: %b]"
+>                .formatted(this.nombre, this.edad, this.eliminado);
+>    }
+> ```
+> ![image](https://github.com/user-attachments/assets/cfed38b3-8c10-477d-8771-922b6e16ea5b)
