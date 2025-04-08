@@ -9,7 +9,7 @@
 
 
 > [!NOTE]
-> <p>Primero, vamos a conocer el lenguaje, su instalación. Luego, aprenderemos a instalar las herramientas de trabajo</p>
+> <p>Primero, vamos a conocer el lenguaje y su instalación. Luego, aprenderemos a instalar las herramientas de trabajo</p>
 > <p>Aprenderemos que son las variables, operadores (manipular datos) -> Tipos de datos, Estructuras de control condicional (Ya no tendremos una ejecución secuencial del programa)</p>
 > <p>Ya que habrán bloques de código que no se ejecutaran en función de la condición</p>
 > <p>Tambien, veremos estructuras de control repetitiva (ejecutar un código n veces sin escribir el código las n veces)</p>
