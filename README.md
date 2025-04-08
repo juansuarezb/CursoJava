@@ -31,7 +31,7 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 </details>
 
 <details>
-  <summary>Sección 2 - POO: Encapsulamiento </summary>
+  <summary>Sección 9 - POO: Encapsulamiento </summary>
   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se abordarán los siguientes temas: </p>
   <ul>
     <li><strong>¿Qué es encapsulamiento?</strong></li>
