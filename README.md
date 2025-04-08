@@ -60,17 +60,12 @@
 
 > [!NOTE]
 > # CONTENIDO DEL CURSO
-
+>
 > <details> 
 >   <summary>📌 Sección 1 - Introducción al Curso</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">sección</a> se realiza la presentación general del curso:</p>
->   <ul>
->     <li>Objetivos de aprendizaje</li>
->     <li>Requisitos previos</li>
->     <li>Metodología de trabajo</li>
->   </ul>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">sección</a> solo se presenta el curso.</p>
 > </details>
-
+>
 > <details> 
 >   <summary>🔧 Sección 2 - Fundamentos de Java</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion2">sección</a> se cubren los conceptos básicos:</p>
@@ -85,7 +80,7 @@
 >     <li><strong>Resumen y ejercicios</strong></li>
 >   </ul>
 > </details>
-
+>
 > <details>
 >   <summary>🧩 Sección 9 - POO: Encapsulamiento</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se trabaja con:</p>
@@ -96,7 +91,7 @@
 >     <li><strong>Modificadores de acceso</strong></li>
 >   </ul>
 > </details>
-
+>
 > <details>
 >   <summary>💾 Sección 14 - PD: Persistencia de Datos</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">sección</a> se aprende:</p>
@@ -113,7 +108,7 @@
 >     </li>
 >   </ul>
 > </details>
-
+>
 > <details>
 >   <summary>🗃️ Sección 15 - PD: Introducción a MySQL</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
@@ -124,7 +119,7 @@
 >     <li><strong>Operaciones CRUD básicas</strong></li>
 >   </ul>
 > </details>
-
+>
 > <details>
 >   <summary>🔌 Sección 16 - PD: Conexión a MySQL</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion16">sección</a> se implementa:</p>
@@ -141,7 +136,7 @@
 >     </li>
 >   </ul>
 > </details>
-
+>
 > <details>
 >   <summary>🌐 Sección 17 - Introducción a Java Web</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se trabaja con:</p>
@@ -152,7 +147,7 @@
 >     <li><strong>Creación de componentes web</strong></li>
 >   </ul>
 > </details>
-
+>
 > <details>
 >   <summary>🚀 Sección 18 - Proyecto Final: Sistema de Mensajes</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion18">sección final</a> se integran todos los conocimientos:</p>
