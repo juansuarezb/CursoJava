@@ -22,13 +22,6 @@
 
 ## Contenido
 
-<details>
-  <summary>Sección 1 - Introducción al curso</summary>
-  <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">primera sección</a> se hará una introducción al curso</p>
-  <ul>
-    <li><strong>Introducción</strong></li>
-  </ul>
-</details>
 
 <details>
   <summary>Sección 9 - POO: Encapsulamiento </summary>
