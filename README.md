@@ -114,18 +114,3 @@ Bienvenido al curso de Java de principiante a avanzado. Este repositorio está o
 
 
 
-
-
-   > [!NOTE]
-> Esto es información adicional que puede ayudar al usuario.
-
-
-
-> [!IMPORTANT]
-> Información crucial.
-
-> [!WARNING]
-> Necesita la atención del usuario.
-
-> [!CAUTION]
-> Consecuencias negativas si no haces caso.
