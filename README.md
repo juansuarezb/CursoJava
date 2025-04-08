@@ -9,14 +9,34 @@
 
 
 > [!NOTE]
-> <p>Primero, vamos a conocer el lenguaje y su instalación. Luego, aprenderemos a instalar las herramientas de trabajo</p>
-> <p>Aprenderemos que son las variables, operadores (manipular datos) -> Tipos de datos, Estructuras de control condicional (Ya no tendremos una ejecución secuencial del programa)</p>
-> <p>Ya que habrán bloques de código que no se ejecutaran en función de la condición</p>
-> <p>Tambien, veremos estructuras de control repetitiva (ejecutar un código n veces sin escribir el código las n veces)</p>
+> ## 🔰 Introducción al Aprendizaje de Java
+> 
+> ### 📌 Fases del Aprendizaje
+> 1. **Conocimiento básico**
+>    - Entender el lenguaje Java
+>    - Proceso de instalación y configuración
+> 
+> 2. **Herramientas de trabajo**
+>    - Instalación del entorno de desarrollo
+>    - Configuración inicial
+> 
+> ### 🧠 Conceptos Fundamentales que Aprenderemos
+> 
+> **📊 Variables y Operadores**
+> - Manipulación de datos
+> - Tipos de datos en Java
+> 
+> **🔀 Estructuras de Control Condicionales**
+> - Romper la ejecución secuencial
+> - Bloques de código que se ejecutan bajo condiciones específicas
+> 
+> **🔄 Estructuras de Control Repetitivas**
+> - Ejecutar código múltiples veces eficientemente
+> - Evitar repetición manual de código
+> 
 > <div align="center">
->   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion1/Imagenes/Imagen2.avif" alt="Página 2 PDF Seccion1 " width="85%">
->   
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion1/Imagenes/Imagen2.avif" alt="Diagrama de conceptos iniciales de Java" width="85%">
+>   <p><em>Diagrama conceptual de los fundamentos de Java</em></p>
 > </div>
-
 [![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
 [![Siguiente](https://img.shields.io/badge/Siguiente_Sección_→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion2/README.md)
