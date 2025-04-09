@@ -63,12 +63,12 @@
 > # CONTENIDO DEL CURSO
 >
 > <details> 
->   <summary>📌 Sección 1 - Introducción al Curso</summary>
+>   <summary><strong>📌 Sección 1 - Introducción al Curso</strong></summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion1">sección</a> solo se presenta el curso.</p>
 > </details>
 >
 > <details> 
->   <summary>🔧 Sección 2 - Fundamentos de Java</summary>
+>   <summary><strong>🔧 Sección 2 - Fundamentos de Java</strong></summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion2">sección</a> se cubren los conceptos básicos:</p>
 >   <ul>
 >     <li><strong>¿Qué es Java y cómo funciona?</strong></li>
@@ -78,11 +78,11 @@
 >     <li><strong>Compilación y ejecución</strong></li>
 >     <li><strong>Sintaxis y semántica</strong></li>
 >     <li><strong>JShell de Java</strong></li>
->     <li><strong>Resumen y ejercicios</strong></li>
+>     <li><strong>Resumen</strong></li>
 >   </ul>
 > </details>
 > <details> 
->   <summary>🔧 Sección 3 - Manejo de variables y operadores</summary>
+>   <summary><strong>🔧 Sección 3 - Manejo de variables y operadores</strong></summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion3">sección</a> se cubren los siguientes temas:</p>
 >   <ul>
 >     <li><strong>Presentación del Módulo</strong></li>
@@ -102,6 +102,24 @@
 >     <li><strong>Resumen</strong></li>
 >   </ul>
 > </details>
+> <details> 
+>   <summary><strong>🔧 Sección 4 - Estructura de Control</strong></summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion4">sección</a> se cubren los siguientes temas:</p>
+>   <ul>
+>     <li><strong>Presentación del Módulo</strong></li>
+>     <li><strong>Condiciones</strong></li>
+>     <li><strong>Condiciones Anidadas</strong>)</li>
+>     <li><strong>Múltiples Condiciones</strong></li>
+>     <li><strong>Switch</strong></li>
+>     <li><strong>Bucle Mientras</strong></li>
+>     <li><strong>Do-While</strong></li>
+>     <li><strong>Bucle Para</strong></li>
+>     <li><strong>Break and Continue</strong></li>
+>     <li><strong>Matriz o Array</strong></li>
+>     <li><strong>For-Each</strong></li>
+>     <li><strong>Matriz multidimensional</strong></li>
+>   </ul>
+> </details>  
 > <details>
 >   <summary>🧩 Sección 5 - Funciones en Java</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
@@ -119,6 +137,22 @@
 >   </ul>
 > </details>
 > <details>
+>   <summary>🧩 Sección 6 - PRACTICAS: Crear aplicaciones</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
+>   <ul>
+>     <li><strong>Presentación del módulo</strong></li>
+>     <li><strong>Primalidad</strong></li>
+>     <li><strong>Palíndromos</strong></li>
+>     <li><strong>Generador de contraseñas</strong></li>
+>     <li><strong>Conversor de Moneda: Parte 1</strong></li>
+>     <li><strong>Conversor de Moneda: Parte 2</strong></li>
+>     <li><strong>Juego: Adivina un número Parte 1</strong></li>
+>     <li><strong>Juego: Adivina un número Parte 2</strong></li>
+>     <li><strong>Javadoc</strong></li>
+>     <li><strong>Ejecutable JAR</strong></li>
+>   </ul>
+> </details>
+> <details>
 >   <summary>🧩 Sección 7 - POO: Programación Orientada a Objetos</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
 >   <ul>
@@ -130,6 +164,21 @@
 >   </ul>
 > </details>
 > <details>
+>   <summary>💾 Sección 8 - POO: Clases y Objetos</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion13">sección</a> veremos:</p>
+>   <ul>
+>     <li><strong>Clases y Objetos</strong></li>
+>     <li><strong>Paquetes</strong></li>
+>     <li><strong>Modificadores de Acceso</strong></li>
+>     <li><strong>Variables y métodos estáticos</strong></li>
+>     <li><strong>Variables Constantes</strong></li>
+>     <li><strong>Constructores</strong></li>
+>     <li><strong>Sobrecarga de métodos</strong></li>
+>     <li><strong>This en Java</strong></li>
+>     <li><strong>Variables y Objetos</strong></li>
+>   </ul>
+> </details> 
+> <details>
 >   <summary>🧩 Sección 9 - POO: Encapsulamiento</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se trabaja con:</p>
 >   <ul>
@@ -138,7 +187,47 @@
 >     <li><strong>Sobreescritura de métodos (toString)</strong></li>
 >   </ul>
 > </details>
->
+> <details>
+>   <summary>🗃️ Sección 10 - POO: Herencia</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <ul>
+>     <li><strong>¿Qué es la herencia?</strong></li>
+>     <li><strong>Superclase y protected</strong></li>
+>     <li><strong>Subclase y uso de Super</strong></li>
+>     <li><strong>Probar Herencia</strong></li>
+>     <li><strong>Polimorfismo</strong></li>
+>     <li><strong>InstanceOf</strong></li>
+>     <li><strong>Conversión de Objetos</strong></li>
+>     <li><strong>Equals</strong></li>
+>     <li><strong>HashCode</strong></li>
+>   </ul>
+> </details>
+> <details>
+>   <summary>🗃️ Sección 11 - POO: Enumeraciones, clases abstractas e interfaces </summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <ul>
+>     <li><strong>Enumeraciones</strong></li>
+>     <li><strong>Enumeraciones con valores</strong></li>
+>     <li><strong>Clases abstractas</strong></li>
+>     <li><strong>Heredar clases abstractas</strong></li>
+>     <li><strong>Interfaces</strong></li>
+>     <li><strong>Implementar interface</strong></li>
+>     <li><strong>Inicializar bloque de código</strong></li>
+>     <li><strong>Clases envolventes</strong></li>
+>   </ul>
+> </details>
+> <details>
+>   <summary>🗃️ Sección 12 - POO: Manejo de excepciones</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <ul>
+>     <li><strong>Errores</strong></li>
+>     <li><strong>Generar Excepciones</strong></li>
+>     <li><strong>Jerarquia de Excepciones</strong></li>
+>     <li><strong>Múltiples excepciones</strong></li>
+>     <li><strong>Crear excepciones</strong></li>
+>     <li><strong>Excepciones verificadas</strong></li>
+>   </ul>
+> </details>
 > <details>
 >   <summary>💾 Sección 13 - POO: Proyecto Catálogo de Películas</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion13">sección</a> veremos:</p>
@@ -157,16 +246,15 @@
 >   <summary>💾 Sección 14 - PD: Persistencia de Datos</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">sección</a> se aprende:</p>
 >   <ul>
->     <li><strong>Fundamentos de persistencia</strong></li>
->     <li><strong>Manejo de Listas y Sets</strong></li>
->     <li><strong>Operaciones con archivos:</strong>
->       <ul>
->         <li>Creación</li>
->         <li>Escritura</li>
->         <li>Lectura</li>
->         <li>Eliminación</li>
->       </ul>
->     </li>
+>     <li><strong>Presentación de Persistencia de Datos</strong></li>
+>     <li><strong>Persistencia de Datos</strong></li>
+>     <li><strong>Lista</strong></li>
+>     <li><strong>Set</strong></li>
+>     <li><strong>Map</strong></li>
+>     <li><strong>Crear archivo</strong></li>
+>     <li><strong>Escribir archivo</strong></li>
+>     <li><strong>Leer archivo</strong></li>
+>     <li><strong>Eliminar archivo</strong></li>
 >   </ul>
 > </details>
 >
@@ -174,10 +262,11 @@
 >   <summary>🗃️ Sección 15 - PD: Introducción a MySQL</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
 >   <ul>
->     <li><strong>Instalación y configuración de MySQL</strong></li>
->     <li><strong>Creación de bases de datos</strong></li>
->     <li><strong>Diseño de tablas</strong></li>
->     <li><strong>Operaciones CRUD básicas</strong></li>
+>     <li><strong>Instalar MySQL</strong></li>
+>     <li><strong>Crer bases de datos</strong></li>
+>     <li><strong>Crear tabla</strong></li>
+>     <li><strong>Insertar registro</strong></li>
+>     <li><strong>Editar y eliminar registro</strong></li>
 >   </ul>
 > </details>
 >
@@ -185,16 +274,12 @@
 >   <summary>🔌 Sección 16 - PD: Conexión a MySQL</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion16">sección</a> se implementa:</p>
 >   <ul>
->     <li><strong>Conexión Java-MySQL</strong></li>
->     <li><strong>Ejecución de consultas SQL desde Java</strong></li>
->     <li><strong>Operaciones completas:</strong>
->       <ul>
->         <li>SELECT</li>
->         <li>INSERT</li>
->         <li>UPDATE</li>
->         <li>DELETE</li>
->       </ul>
->     </li>
+>     <li><strong>Descargar dependencias de MySQL</strong></li>
+>     <li><strong>De Java a MySQL</strong></li>
+>     <li><strong>SELECT - desde Java</strong></li>
+>     <li><strong>INSERT INTO - desde Java</strong></li>
+>     <li><strong>UPDATE - desde Java</strong></li>
+>     <li><strong>DELETE - desde Java</strong></li>
 >   </ul>
 > </details>
 >
@@ -202,10 +287,12 @@
 >   <summary>🌐 Sección 17 - Introducción a Java Web</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion17">sección</a> se trabaja con:</p>
 >   <ul>
->     <li><strong>Configuración de Tomcat</strong></li>
->     <li><strong>Desarrollo con JSP</strong></li>
->     <li><strong>Métodos HTTP (GET/POST)</strong></li>
->     <li><strong>Creación de componentes web</strong></li>
+>     <li><strong>Instalar ApacheTomcat9</strong></li>
+>     <li><strong>Hola Mundo web</strong></li>
+>     <li><strong>¿Qué es JSP?</strong></li>
+>     <li><strong>Diseñar en JSP - Crear mensaje</strong></li>
+>     <li><strong>Diseñar en JSP - Mostrar mensaje</strong></li>
+>     <li><strong>Métodos GET Y POST</strong></li>
 >   </ul>
 > </details>
 >
@@ -213,10 +300,15 @@
 >   <summary>🚀 Sección 18 - Proyecto Final: Sistema de Mensajes</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion18">sección final</a> se integran todos los conocimientos:</p>
 >   <ul>
->     <li><strong>Arquitectura completa</strong></li>
->     <li><strong>Conexión a base de datos</strong></li>
->     <li><strong>Operaciones CRUD completas</strong></li>
->     <li><strong>Interfaz web funcional</strong></li>
+>     <li><strong>Conexion a MySQL</strong></li>
+>     <li><strong>Clase Mensaje</strong></li>
+>     <li><strong>Listar datos del tipo Objeto</strong></li>
+>     <li><strong>Editar datos del tipo Objeto</strong></li>
+>     <li><strong>Eliminar datos del tipo Objeto</strong></li>
+>     <li><strong>Mostrar Mensaje</strong></li>
+>     <li><strong>Crear Mensaje</strong></li>
+>     <li><strong>Editar Mensaje</strong></li>
+>     <li><strong>Eliminar Mensaje</strong></li>
 >   </ul>
 > </details>
 
