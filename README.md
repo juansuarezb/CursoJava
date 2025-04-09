@@ -122,7 +122,7 @@
 > </details>  
 > <details>
 >   <summary>🧩 Sección 5 - Funciones en Java</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion5">sección</a> se trabaja con:</p>
 >   <ul>
 >     <li><strong>Presentación del módulo</strong></li>
 >     <li><strong>Definir una función</strong></li>
@@ -138,7 +138,7 @@
 > </details>
 > <details>
 >   <summary>🧩 Sección 6 - PRACTICAS: Crear aplicaciones</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion6">sección</a> se trabaja con:</p>
 >   <ul>
 >     <li><strong>Presentación del módulo</strong></li>
 >     <li><strong>Primalidad</strong></li>
@@ -165,7 +165,7 @@
 > </details>
 > <details>
 >   <summary>💾 Sección 8 - POO: Clases y Objetos</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion13">sección</a> veremos:</p>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion8">sección</a> veremos:</p>
 >   <ul>
 >     <li><strong>Clases y Objetos</strong></li>
 >     <li><strong>Paquetes</strong></li>
@@ -189,7 +189,7 @@
 > </details>
 > <details>
 >   <summary>🗃️ Sección 10 - POO: Herencia</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion10">sección</a> se cubre:</p>
 >   <ul>
 >     <li><strong>¿Qué es la herencia?</strong></li>
 >     <li><strong>Superclase y protected</strong></li>
@@ -204,7 +204,7 @@
 > </details>
 > <details>
 >   <summary>🗃️ Sección 11 - POO: Enumeraciones, clases abstractas e interfaces </summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion11">sección</a> se cubre:</p>
 >   <ul>
 >     <li><strong>Enumeraciones</strong></li>
 >     <li><strong>Enumeraciones con valores</strong></li>
@@ -218,7 +218,7 @@
 > </details>
 > <details>
 >   <summary>🗃️ Sección 12 - POO: Manejo de excepciones</summary>
->   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion15">sección</a> se cubre:</p>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion12">sección</a> se cubre:</p>
 >   <ul>
 >     <li><strong>Errores</strong></li>
 >     <li><strong>Generar Excepciones</strong></li>
