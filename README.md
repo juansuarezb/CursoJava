@@ -1,56 +1,52 @@
-# Sección 8: POO - Clases y Objetos
+# Sección 11: POO - Enumeraciones, clases abstractas e interfaces
 
 > [!NOTE]
 > **Temas cubiertos:**
-> - Clases y Objetos
-> - Paquetes
-> - Modificadores de acceso
-> - Variable y métodos estáticos
-> - Variables constantes
-> - Constructores
-> - Sobrecarga de métodos
-> - This en java
-> - Variables y Objetos
+> - Enumeraciones
+> - Enumeraciones con valores
+> - Clases abstractas
+> - Heredar Clases abstractas
+> - Interfaces
+> - Implementar interface
+> - Inicializar bloque de código
+> - Clases envolventes
+
 
 
 
 > [!NOTE]  
-> # 1.  Clases y Objetos
+> # 1. Enumeraciones
 > 
 
 > [!NOTE]  
-> # 2. Paquetes
+> # 2. Enumeraciones con valores
 > 
 
 > [!NOTE]  
-> # 3. Modificadores de acceso
+> # 3. Clases abstractas
 > 
 
 > [!NOTE]  
-> # 4. Variable y métodos estáticos
+> # 4. Heredar Clases abstractas
 > 
 
 > [!NOTE]  
-> # 5. Variables constantes
+> # 5. Interfaces
 > 
 
 > [!NOTE]  
-> # 6. Constructores
+> # 6. Implementar interface
 > 
 
 > [!NOTE]  
-> # 7. Sobrecarga de métodos
+> # 7. Inicializar bloque de código
 > 
 
 > [!NOTE]  
-> # 8. This en java
-> 
-
-> [!NOTE]  
-> # 9. Variables y Objetos
+> # 8. Clases envolventes
 > 
 
 
 [![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
-[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_7-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion7/README.md)
-[![Siguiente](https://img.shields.io/badge/Seccion9→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion9/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_10-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion10/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion12→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion12/README.md)
