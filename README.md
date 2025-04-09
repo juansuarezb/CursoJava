@@ -812,3 +812,8 @@ Al hacer clic en el botón **Editar** en la vista de mensajes, el usuario es red
 ```
 
 ![image](https://github.com/user-attachments/assets/729c85d8-a734-4e60-b0bd-9d6c50d787c0)
+
+
+[![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_17-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion17/README.md)
+
