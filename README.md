@@ -172,3 +172,7 @@ WHERE id_mensaje = 2;
 DELETE  FROM mensajes_db.mensajes 
 WHERE id_mensaje = 2;
 ```
+
+[![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_14-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion14/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion16→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion16/README.md)
