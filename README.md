@@ -184,3 +184,7 @@ lista1.forEach(dato -> {
 
 > [!NOTE]
 > ## 📌 9. Eliminar Archivo
+
+[![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_13-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion13/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion15→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion15/README.md)
