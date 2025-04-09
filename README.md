@@ -97,10 +97,9 @@
 >   <summary>🧩 Sección 9 - POO: Encapsulamiento</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se trabaja con:</p>
 >   <ul>
->     <li><strong>Conceptos de encapsulamiento</strong></li>
->     <li><strong>Implementación de Getters y Setters</strong></li>
+>     <li><strong>¿Qué es Encapsulamiento?</strong></li>
+>     <li><strong>Getters y Setters</strong></li>
 >     <li><strong>Sobreescritura de métodos (toString)</strong></li>
->     <li><strong>Modificadores de acceso</strong></li>
 >   </ul>
 > </details>
 >
