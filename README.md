@@ -82,6 +82,17 @@
 > </details>
 >
 > <details>
+>   <summary>🧩 Sección 7 - POO: Programación Orientada a Objetos</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
+>   <ul>
+>     <li><strong>Presentación del curso POO</strong></li>
+>     <li><strong>Programación Orientada a Objetos</strong></li>
+>     <li><strong>¿Qué es un Objeto?</strong></li>
+>     <li><strong>¿Qué es una clase?</strong></li>
+>     <li><strong>Modularidad</strong></li>
+>   </ul>
+> </details>
+> <details>
 >   <summary>🧩 Sección 9 - POO: Encapsulamiento</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion9">sección</a> se trabaja con:</p>
 >   <ul>
