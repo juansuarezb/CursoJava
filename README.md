@@ -1,56 +1,56 @@
-# Sección 8: POO - Clases y Objetos
+# Sección 10: POO - Herencia
 
 > [!NOTE]
 > **Temas cubiertos:**
-> - Clases y Objetos
-> - Paquetes
-> - Modificadores de acceso
-> - Variable y métodos estáticos
-> - Variables constantes
-> - Constructores
-> - Sobrecarga de métodos
-> - This en java
-> - Variables y Objetos
+> - ¿Qué es la herencia?
+> - Superclase y protected
+> - Subclase y uso de Super
+> - Probar Herencia
+> - Polimorfismo
+> - InstanceOf
+> - Conversión de Objetos
+> - Equals
+> - HashCode
 
 
 
 > [!NOTE]  
-> # 1.  Clases y Objetos
+> # 1.  ¿Qué es la herencia?
 > 
 
 > [!NOTE]  
-> # 2. Paquetes
+> # 2. Superclase y protected
 > 
 
 > [!NOTE]  
-> # 3. Modificadores de acceso
+> # 3. Subclase y uso de Super
 > 
 
 > [!NOTE]  
-> # 4. Variable y métodos estáticos
+> # 4. Probar Herencia
 > 
 
 > [!NOTE]  
-> # 5. Variables constantes
+> # 5. Polimorfismo
 > 
 
 > [!NOTE]  
-> # 6. Constructores
+> # 6. InstanceOf
 > 
 
 > [!NOTE]  
-> # 7. Sobrecarga de métodos
+> # 7. Conversión de Objetos
 > 
 
 > [!NOTE]  
-> # 8. This en java
+> # 8. Equals
 > 
 
 > [!NOTE]  
-> # 9. Variables y Objetos
+> # 9. HashCode
 > 
 
 
 [![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
-[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_7-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion7/README.md)
-[![Siguiente](https://img.shields.io/badge/Seccion9→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion9/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_9-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion9/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion11→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion11/README.md)
