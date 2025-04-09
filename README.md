@@ -5,8 +5,8 @@
 ![Hola Mundo](https://img.shields.io/badge/Greeting-Hola_Mundo-informational?style=flat&logo=octocat&logoColor=white&color=6aa6f8)
 
 > [!IMPORTANT]
-> **EL CONTENIDO DE ESTE CURSO PERTENECE EN SU MAYORÍA A: Alex Roel ChB, Abel Ch. CREADOR ORIGINAL DEL CURSO EN UDEMY. [LINK DEL CURSO AQUÍ](https://www.udemy.com/course/curso-completo-de-java/?couponCode=KEEPLEARNING)**
-> #EL PRESENTE REPOSITORIO SIGUE EN CONSTRUCCIÓN
+> **EL CONTENIDO DE ESTE CURSO PERTENECE EN SU MAYORÍA A: Alex Roel ChB, Abel Ch. CREADOR ORIGINAL DEL CURSO EN UDEMY. [LINK DEL CURSO AQUÍ](https://www.udemy.com/course/curso-completo-de-java/?couponCode=KEEPLEARNING)** <br>
+> **EL PRESENTE REPOSITORIO SIGUE EN CONSTRUCCIÓN**
 
 
 ## 
