@@ -1,60 +1,56 @@
-# Sección 6: PRÁCTICAS : CREAR APLICACIONES
+# Sección 8: POO - Clases y Objetos
 
 > [!NOTE]
 > **Temas cubiertos:**
-> - Presentación del módulo
-> - Primalidad
-> - Palíndromos
-> - Generador de contraseñas
-> - Conversor de moneda: Parte 01
-> - Conversor de moneda: Parte 02
-> - Juego: Adivina un número parte 01
-> - Juego: Adivina un número parte 02
-> - JavaDoc
-> - Ejecutable JAR
+> - Clases y Objetos
+> - Paquetes
+> - Modificadores de acceso
+> - Variable y métodos estáticos
+> - Variables constantes
+> - Constructores
+> - Sobrecarga de métodos
+> - This en java
+> - Variables y Objetos
+
 
 
 > [!NOTE]  
-> # 1. Presentación del módulo
+> # 1.  Clases y Objetos
 > 
 
 > [!NOTE]  
-> # 2. Primalidad
+> # 2. Paquetes
 > 
 
 > [!NOTE]  
-> # 3. Palíndromos 
+> # 3. Modificadores de acceso
 > 
 
 > [!NOTE]  
-> # 4. Generador de contraseñas
+> # 4. Variable y métodos estáticos
 > 
 
 > [!NOTE]  
-> # 5. Conversor de moneda: Parte 01
+> # 5. Variables constantes
 > 
 
 > [!NOTE]  
-> # 6. Conversor de moneda: Parte 02
+> # 6. Constructores
 > 
 
 > [!NOTE]  
-> # 7. Juego: Adivina un número parte 01
+> # 7. Sobrecarga de métodos
 > 
 
 > [!NOTE]  
-> # 8. Juego: Adivina un número parte 02
+> # 8. This en java
 > 
 
 > [!NOTE]  
-> # 9. JavaDoc
-> 
-
-> [!NOTE]  
-> # 10. Ejecutable JAR
+> # 9. Variables y Objetos
 > 
 
 
 [![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
-[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_5-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion5/README.md)
-[![Siguiente](https://img.shields.io/badge/Seccion7→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion7/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_7-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion7/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion9→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion9/README.md)
