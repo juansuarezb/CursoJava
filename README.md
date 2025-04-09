@@ -81,7 +81,43 @@
 >     <li><strong>Resumen y ejercicios</strong></li>
 >   </ul>
 > </details>
->
+> <details> 
+>   <summary>🔧 Sección 3 - Manejo de variables y operadores</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion3">sección</a> se cubren los siguientes temas:</p>
+>   <ul>
+>     <li><strong>Presentación del Módulo</strong></li>
+>     <li><strong>Primer Programa</strong></li>
+>     <li><strong>Compilar y Ejecutar</strong>)</li>
+>     <li><strong>Comentarios</strong></li>
+>     <li><strong>Variables</strong></li>
+>     <li><strong>Tipos de datos primitivos</strong></li>
+>     <li><strong>Operadores matemáticos/strong></li>
+>     <li><strong>Operadores lógicos</strong></li>
+>     <li><strong>Incremento y Decremento</strong></li>
+>     <li><strong>Entrada de Datos</strong></li>
+>     <li><strong>Salida de Datos</strong></li>
+>     <li><strong>Práctica: Suma de 2 números</strong></li>
+>     <li><strong>Práctica: Precio de Venta</strong></li>
+>     <li><strong>Cuestionario 1: Manejo de variables y operadores</strong></li>
+>     <li><strong>Resumen</strong></li>
+>   </ul>
+> </details>
+> <details>
+>   <summary>🧩 Sección 5 - Funciones en Java</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
+>   <ul>
+>     <li><strong>Presentación del módulo</strong></li>
+>     <li><strong>Definir una función</strong></li>
+>     <li><strong>Parámetros y argumentos</strong></li>
+>     <li><strong>Funciones con retorno</strong></li>
+>     <li><strong>Sobrecarga de funciones</strong></li>
+>     <li><strong>Funciones Recursivas</strong></li>
+>     <li><strong>Varargs</strong></li>
+>     <li><strong>Clase Math</strong></li>
+>     <li><strong>Clase String</strong></li>
+>     <li><strong>StringBuilder</strong></li>
+>   </ul>
+> </details>
 > <details>
 >   <summary>🧩 Sección 7 - POO: Programación Orientada a Objetos</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion7">sección</a> se trabaja con:</p>
