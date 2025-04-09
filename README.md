@@ -179,7 +179,7 @@ src/
 >   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion13/Imagenes/Imagen22.avif" width="600"/>
 > </p>
 > <p>Nuevamente seleccionamos el proyecto y seleccionamos la opción de Clean and Build y así vamos a generar el archivo JAR</p>
-> <p>Si nos dirijimos a las pestaña de Files vamos a observar que se creo una carpeta "dist" </p>
+> <p>Si nos dirijimos a las pestaña de Files vamos a observar que se creo una carpeta "dist" y si buscamos el .JAR y lo ejecutamos tendremos la ejecución del programa.</p>
 > <p align="center">
 >   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion13/Imagenes/Imagen23.avif" width="600"/>
 > </p>
