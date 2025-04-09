@@ -117,3 +117,8 @@ public class Persona {
 >    }
 > ```
 > ![image](https://github.com/user-attachments/assets/cfed38b3-8c10-477d-8771-922b6e16ea5b)
+
+
+[![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_8-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion8/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion10→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion10/README.md)
