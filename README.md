@@ -93,6 +93,20 @@
 > </details>
 >
 > <details>
+>   <summary>💾 Sección 13 - POO: Proyecto Catálogo de Películas</summary>
+>   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion13">sección</a> veremos:</p>
+>   <ul>
+>     <li><strong>Presentación del Proyecto</strong></li>
+>     <li><strong>JavaBeans</strong></li>
+>     <li><strong>Cuadro de diálogo</strong></li>
+>     <li><strong>Interface Catálogo película</strong></li>
+>     <li><strong>Implementar Catálogo película</strong></li>
+>     <li><strong>UI de Pelicula</strong></li>
+>     <li><strong>Manejo de errores</strong></li>
+>     <li><strong>Final - Generar ejecutable</strong></li>
+>   </ul>
+> </details> 
+> <details>
 >   <summary>💾 Sección 14 - PD: Persistencia de Datos</summary>
 >   <p>En esta <a href="https://github.com/juansuarezb/CursoJava/tree/Seccion14">sección</a> se aprende:</p>
 >   <ul>
