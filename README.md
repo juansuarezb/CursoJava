@@ -1,4 +1,4 @@
-# Bienvenido al curso de Java de principiante a avanzado. Este repositorio está organizado en ramas para facilitar el acceso a cada sección del curso. <br>
+# Bienvenido al curso de Java de principiante a avanzado. <br>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F76A27&width=435&separator=%3C&lines=System.out.println(%22Hola+Mundo%22);)](https://git.io/typing-svg)
 
