@@ -604,4 +604,9 @@
 >       </div>
 > > <div align="center">
 >    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion17/Imagenes/Imagen33.avif" alt="Página de descarga Tomcat 9" width="85%" <br>  
-> </div> 
+> </div>
+
+
+[![Main](https://img.shields.io/badge/🏠_Volver_al_Main-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/main/README.md)
+[![Anterior](https://img.shields.io/badge/←_Volver_a_Sección_16-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion16/README.md)
+[![Siguiente](https://img.shields.io/badge/Seccion18→-2E8B57?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juansuarezb/CursoJava/blob/Seccion18/README.md)
