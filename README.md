@@ -152,8 +152,8 @@ Nos dirimos a la configuración del sistema de Windows
 
 **Luego seleccionamos en variables del sistema: Nueva** <br>
 <div align="center">
-   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen20.avif" alt="Página de descarga Tomcat 9" width="85%">
-    *Copiamos el path donde tengamos instalado el jdk hasta la carpeta bin: D:\ProgramasProgra\JDK\bin y damos en aceptar y aceptar.*
+   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen20.avif" alt="Página de descarga Tomcat 9" width="85%"> <br>
+    Copiamos el path donde tengamos instalado el jdk hasta la carpeta bin: D:\ProgramasProgra\JDK\bin y damos en aceptar y aceptar.
 </div>
 
 
