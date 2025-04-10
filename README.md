@@ -140,6 +140,22 @@
 > [!NOTE]
 > ## **2: Instalar el JDK**
 
+Otra cosa más que vamos a agregar es la configuración de la variable de entorno para java. Así, otros entornos de desarrollo van a saber donde está instaldo el JDK
+Lo que contiene esta variable de entorno JavaHome es la ruta de instalación del JDK
+Nos dirimos a la configuración del sistema de Windows
+<div align="center">
+   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen17.avif" alt="Página de descarga Tomcat 9" width="85%">
+   <p><em>Y luego, nos dirijimos a la parte de sistema.</em></p>
+   *Nos dirijimos a "Acerca de" luego, a Configuración avanzada del sistema.
+    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen18.avif" alt="Página de descarga Tomcat 9" width="85%">
+</div>
+
+**Luego seleccionamos en variables del sistema: Nueva** <br>
+<div align="center">
+   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen20.avif" alt="Página de descarga Tomcat 9" width="85%">
+    *Copiamos el path donde tengamos instalado el jdk hasta la carpeta bin: D:\ProgramasProgra\JDK\bin y damos en aceptar y aceptar.*
+</div>
+
 
 > [!NOTE]
 > ## **3: Instalar APache Netbeans**
@@ -224,7 +240,11 @@ public class Hola {
 
 > [!NOTE]
 > ## **7: JShell de Java**
->
+> el Jshell de java es una herramienta de lineas de comando que está introducido desed el JDK 9 <br>
+> El Jshell nos proporciona un entorno interactivo para escribir, probar y ejecutar un fragmento de código de java sin necesidad de crar un archivo <br>
+> Abrimos la terminal del sistema y colocamos el comando jshell. <br>
+> ![Resumen](https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen19.avif)
+> ![Resumen](https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen21.avif)
 
 > [!NOTE]
 > ## **8: Resumen**
