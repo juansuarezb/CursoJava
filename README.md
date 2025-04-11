@@ -156,9 +156,85 @@ Nos dirimos a la configuración del sistema de Windows
     Copiamos el path donde tengamos instalado el jdk hasta la carpeta bin: D:\ProgramasProgra\JDK\bin y damos en aceptar y aceptar.
 </div>
 
-
 > [!NOTE]
-> ## **3: Instalar APache Netbeans**
+> ## **3: Instalación de Apache NetBeans**
+> Apache NetBeans es un entorno de desarrollo integrado (IDE) que permite programar en Java y otros lenguajes como PHP, HTML5, JavaScript y C/C++. A continuación, te explicamos cómo instalarlo correctamente:
+>
+> ---
+> 
+> ### 🔗 Descarga NetBeans
+>
+> 1. Dirígete al sitio oficial del proyecto:
+> 👉 [https://netbeans.apache.org/download/index.html](https://netbeans.apache.org/download/index.html)
+>
+> 2. Selecciona la última versión estable y elige tu sistema operativo (Windows, macOS o Linux).
+>
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen22.avif" alt="Página de descarga Tomcat 9" width="85%">
+>   
+> </div>
+> ---
+> 
+> ### 🧰 Requisitos previos
+> - Instala el **Java Development Kit (JDK)** antes de NetBeans.  
+>   Puedes descargar el JDK desde:  
+>   👉 [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html)  
+>
+>   > 📌 NetBeans requiere al menos JDK 8 o superior para funcionar correctamente.
+>
+> ---
+>
+> ### 🖥️ Instalación paso a paso
+>
+> #### Para Windows:
+> 1. Ejecuta el archivo `.exe` descargado.
+> 2. Acepta los términos de licencia.
+> 3. Elige las opciones de instalación (por defecto está bien).
+> 4. Asegúrate de que detecta correctamente el JDK instalado.
+> 5. Haz clic en **Install** y espera que finalice.
+>
+> #### Para macOS:
+> 1. Ejecuta el `.dmg` descargado.
+> 2. Arrastra el ícono de NetBeans a la carpeta de **Aplicaciones**.
+>
+> #### Para Linux:
+> Puedes instalarlo desde la terminal usando Snap:
+> ```bash
+> sudo snap install netbeans --classic
+> ```
+>
+> ---
+>
+> ### ✅ Verificación
+>
+> Una vez instalado:
+> - Abre NetBeans desde el menú o acceso directo.
+> - Ve a **Help > About** para confirmar que la instalación se completó correctamente.
+>
+> <div align="center">
+>   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen23.avif" alt="Página de descarga Tomcat 9" width="85%">
+> 
+> </div>
+>
+> ---
+>
+> ### 📌 Recomendación
+> Para desarrollo en Java, asegúrate de tener activado el plugin de **Java SE** en:
+> `Tools > Plugins > Installed` → busca "Java SE" y verifica que esté habilitado.
+>
+> ---
+>
+> ⚠️ **Problemas comunes**
+>
+> - **NetBeans no detecta el JDK:** Revisa que esté correctamente instalado y agregado al PATH.
+> - **Errores de ejecución en proyectos Java:** Asegúrate de haber creado un proyecto de tipo "Java with Ant" o "Java with Maven", y no solo una carpeta vacía.
+>
+> ---
+>
+> Para más detalles puedes consultar la guía oficial:  
+> 👉 [https://netbeans.apache.org/kb/docs/](https://netbeans.apache.org/kb/docs/)
+
+
 
 
 > [!NOTE]
