@@ -229,14 +229,85 @@ public class Hola {
    <p><em>Ejecución del programa </em></p>
 </div>
 
+
 > [!NOTE]
-> ## **5: Compilacion y Ejecución**
->
+> ## **5: Compilación y Ejecución**
+> En Java, **compilar** significa traducir el código fuente que escribimos (archivo `.java`) a un código intermedio llamado **bytecode** (archivo `.class`), que puede ser ejecutado por la **Máquina Virtual de Java (JVM)**.
+> 
+> Este proceso se realiza en dos etapas:
+> 
+> 1. **Compilación:**  
+>    Se usa el compilador de Java (`javac`) para traducir el archivo `.java` en un archivo `.class`.  
+>    Por ejemplo:  
+>    ```bash
+>    javac HolaMundo.java
+>    ```
+>    Esto generará un archivo llamado `HolaMundo.class`.
+> 
+> 2. **Ejecución:**  
+>    Luego, ejecutamos ese bytecode con la JVM usando el comando `java` seguido del nombre de la clase (sin extensión):  
+>    ```bash
+>    java HolaMundo
+>    ```
+>    Esto mostrará el resultado en consola.
+> 
+> ---
+> 
+> ### 📌 Ejemplo completo
+
+```java
+// Archivo: HolaMundo.java
+
+public class HolaMundo {
+    public static void main(String[] args) {
+        // Imprime un mensaje en consola
+        System.out.println("¡Hola, mundo!");
+
+        /*
+         * Compilación:
+         *   javac HolaMundo.java
+         *   -> Genera HolaMundo.class
+         *
+         * Ejecución:
+         *   java HolaMundo
+         *   -> Imprime: ¡Hola, mundo!
+         */
+    }
+}
+```
 
 > [!NOTE]
 > ## **6: Sintaxis y semántica**
->
+> En el lenguaje Java, la **sintaxis** se refiere al conjunto de reglas y estructuras que deben seguirse para escribir un programa correctamente. Es decir, la forma en la que escribimos el código (palabras clave, paréntesis, puntos y comas, etc.).
+> 
+> Por otro lado, la **semántica** está relacionada con el **significado** del código: lo que ese conjunto de instrucciones hace o pretende hacer cuando se ejecuta.
+> 
+> **SINTAXIS → CÓMO SE ESCRIBE CORRECTAMENTE EL CÓDIGO**  
+> **SEMÁNTICA → QUÉ HACE ESE CÓDIGO**
 
+### 📌 Ejemplo en Java
+
+```java
+public class HolaMundo {
+    public static void main(String[] args) {
+        // ✅ Sintaxis correcta:
+        // Las llaves {}, el punto y coma ;, el uso de public static void main,
+        // todo está escrito conforme a las reglas del lenguaje Java.
+
+        // ✅ Semántica:
+        // Este programa muestra el mensaje "Hola, mundo!" en la consola.
+        // Eso es lo que significa este código cuando se ejecuta.
+
+        // ⚠️ Si cometiéramos un error como olvidar el punto y coma o escribir mal una palabra clave
+        // (por ejemplo 'publick' en vez de 'public'), violaríamos la sintaxis y el programa no se compilaría.
+
+        // ⚠️ Si escribiéramos algo sintácticamente correcto pero que no hace lo que queremos,
+        // estaríamos teniendo un problema semántico.
+
+        System.out.println("Hola, mundo!");
+    }
+}
+```
 
 > [!NOTE]
 > ## **7: JShell de Java**
