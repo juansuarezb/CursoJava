@@ -311,8 +311,8 @@ public class HolaMundo {
 
 > [!NOTE]
 > ## **7: JShell de Java**
-> el Jshell de java es una herramienta de lineas de comando que está introducido desed el JDK 9 <br>
-> El Jshell nos proporciona un entorno interactivo para escribir, probar y ejecutar un fragmento de código de java sin necesidad de crar un archivo <br>
+> El Jshell de java es una herramienta de lineas de comando que está introducido desed el JDK 9 <br>
+> Nos proporciona un entorno interactivo para escribir, probar y ejecutar un fragmento de código de java sin necesidad de crear un archivo <br>
 > Abrimos la terminal del sistema y colocamos el comando jshell. <br>
 > ![Resumen](https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen19.avif)
 > ![Resumen](https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen21.avif)
