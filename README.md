@@ -148,9 +148,9 @@
 > Puedes descargar la última versión del JDK desde la página oficial de Oracle:
 > 👉 [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html)
 >
-<div align="center">
-   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen24.avif" alt="Página de descarga Tomcat 9" width="85%">
-</div>
+> <div align="center">
+>    <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen24.avif" alt="Página de descarga Tomcat 9" width="85%">
+> </div>
 >
 > Alternativas:
 > - OpenJDK (versión libre): [https://jdk.java.net/](https://jdk.java.net/)
