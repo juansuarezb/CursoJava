@@ -138,7 +138,102 @@
 > 🔍 **Recomendación para principiantes**: Comienza con Java SE (Standard Edition) para dominar los fundamentos antes de explorar otras ediciones.
 
 > [!NOTE]
-> ## **2: Instalar el JDK**
+> ## **2: Instalar el JDK (Java Development Kit)
+> El **JDK** (Java Development Kit) es fundamental para desarrollar aplicaciones en Java. Contiene herramientas como el compilador `javac` y la máquina virtual **JVM** necesarias para compilar y ejecutar programas Java.
+>
+> ---
+>
+> ### 🔗 Descarga del JDK
+>
+> Puedes descargar la última versión del JDK desde la página oficial de Oracle:
+> 👉 [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html)
+>
+<div align="center">
+   <img src="https://github.com/juansuarezb/CursoJava/raw/Seccion2/Imagenes/Imagen24.avif" alt="Página de descarga Tomcat 9" width="85%">
+</div>
+>
+> Alternativas:
+> - OpenJDK (versión libre): [https://jdk.java.net/](https://jdk.java.net/)
+> - AdoptOpenJDK (ahora Adoptium): [https://adoptium.net/](https://adoptium.net/)
+>
+> ---
+>
+> ### 🧰 Requisitos
+> - Espacio libre en disco: al menos 300 MB.
+> - Acceso de administrador para instalar.
+>
+> ---
+>
+> ### 🖥️ Instalación paso a paso
+>
+> #### 🔹 Windows
+> 1. Descarga el instalador `.exe`.
+> 2. Ejecuta el archivo.
+> 3. Acepta los términos y sigue los pasos por defecto.
+> 4. Al finalizar, **agrega el JDK al PATH**:
+>    - Ve a "Configuración del sistema" > Variables de entorno.
+>    - Agrega una nueva variable llamada:
+>      ```
+>      JAVA_HOME = C:\Program Files\Java\jdk-XX
+>      ```
+>    - Luego edita la variable `Path` y agrega:
+>      ```
+>      %JAVA_HOME%\bin
+>      ```
+>
+> #### 🔹 macOS
+> 1. Descarga el archivo `.dmg` correspondiente.
+> 2. Abre el instalador y sigue las instrucciones.
+> 3. Verifica la instalación con:
+>    ```bash
+>    java -version
+>    ```
+>
+> #### 🔹 Linux (Ubuntu/Debian)
+> Puedes usar OpenJDK desde el terminal:
+> ```bash
+> sudo apt update
+> sudo apt install openjdk-17-jdk
+> ```
+> Luego verifica con:
+> ```bash
+> java -version
+> ```
+>
+> ---
+>
+> ### ✅ Verificación de la instalación
+>
+> Abre una terminal o consola y escribe:
+> ```bash
+> java -version
+> javac -version
+> ```
+> Si ves una salida como esta, el JDK está bien instalado:
+> ```
+> java version "17.0.2" 2024-01-16
+> Java(TM) SE Runtime Environment
+> Java HotSpot(TM) 64-Bit Server VM
+> ```
+>
+> ---
+>
+> ### 📌 Nota
+> - **El JRE (Java Runtime Environment)** ya viene incluido dentro del JDK, no necesitas instalarlo por separado.
+> - Para usar NetBeans o compilar desde la consola, necesitas tener el JDK instalado y configurado correctamente.
+>
+> ---
+>
+> 🛠️ **¿Problemas?**
+> - Si `javac` no funciona, probablemente no agregaste el JDK al `PATH`.
+> - Puedes instalar varias versiones de JDK y cambiar entre ellas usando herramientas como `jEnv` (en Linux/macOS).
+>
+> ---
+>
+> Para más ayuda puedes consultar:
+> 👉 [Guía oficial de instalación del JDK (Oracle)](https://docs.oracle.com/en/java/javase/)
+
+
 
 Otra cosa más que vamos a agregar es la configuración de la variable de entorno para java. Así, otros entornos de desarrollo van a saber donde está instaldo el JDK
 Lo que contiene esta variable de entorno JavaHome es la ruta de instalación del JDK
