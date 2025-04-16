@@ -1,4 +1,6 @@
-# Bienvenido al curso de Java de principiante a avanzado. <br>
+<img align='right' src='https://user-images.githubusercontent.com/5713670/87202985-820dcb80-c2b6-11ea-9f56-7ec461c497c3.gif' width='200'>
+
+<h1>Bienvenido al curso de Java de principiante a avanzado.</h1>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F76A27&width=435&separator=%3C&lines=System.out.println(%22Hola+Mundo%22);)](https://git.io/typing-svg)
 
