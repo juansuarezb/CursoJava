@@ -1,5 +1,5 @@
 title: "Curso de Java"
 description: "Sitio del curso con documentación por secciones"
-theme: just-the-docs
+theme: minima
 future: false
 plugins: []
